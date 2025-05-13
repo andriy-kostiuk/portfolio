@@ -1,0 +1,21 @@
+@import '@/styles/abstracts';
+
+body.theme-light {
+  --text: #{$light-text};
+  --text-light: #{$light-text-light};
+  --icon: #{$light-icon};
+  --icon-active: #{$light-icon-active};
+
+  --icon-bg: #{$light-icon-bg};
+  --card-bg: #{$light-card-bg};
+  --page-bg: #{$light-page-bg};
+  --menu-bg: #{$light-menu-bg};
+  --primary: #{$light-primary};
+  --primary-hover: #{$light-primary-hover};
+  --border: #{$light-border};
+
+  --white: #{$white};
+  --highlight-bg: #{$highlight-bg};
+  --shadow: #{$shadow};
+  --green: #{$green};
+}
