@@ -9,42 +9,36 @@ $tablet-padding-inline: 24px;
 $desktop-padding-inline: 30px;
 
 // light-theme
-$light-text: #2b2b2b;
-$light-text-light: #767676;
-$light-border: #f0f0f6;
+$light-text: #111111; // ще глибший чорний
+$light-text-light: #666666; // виразніший сірий
+$light-border: #b3b3b3; // чіткий контрастний бордер
 
-$light-icon: #767676;
-$light-icon-active: #2b2b2b;
-$light-icon-bg: #f0f0f6;
+$light-icon: #666666; // темно-сірий
+$light-icon-active: #111111; // насичений чорний
+$light-icon-bg: #dce3f2; // світлий блакитний акцент
 
-$light-card-bg: #fff;
-$light-page-bg: #f0f0f6;
-$light-menu-bg: #fafafa;
-
-$light-primary: #ffb400;
-$light-primary-hover: #f78f42;
+$light-card-bg: #ffffff; // чисто білий
+$light-page-bg: #f0f4ff; // дуже світлий блакитний фон
+$light-menu-bg: #dbe6f0; // світлий приглушений блакитно-сірий — елегантний і м’який
 
 // dark-theme
-$dark-text: #ffffff;
-$dark-text-light: #bababf;
-$dark-border: #f0f0f6;
+$dark-text: #ffffff; // чисто білий для максимального контрасту
+$dark-text-light: #bbbbbb; // м’якший, але ще помітний
+$dark-border: #666f7a; // світліший і холодніший бордер
 
-$dark-icon: #767676;
-$dark-icon-active: #131313;
-$dark-icon-bg: #f0f0f6;
+$dark-icon: #bbbbbb; // м’яко-сірий
+$dark-icon-active: #ffffff; // яскравий
+$dark-icon-bg: #334155; // холодний насичений синій (Tailwind slate-800)
 
-$dark-card-bg: #1c1c1c;
-$dark-page-bg: #131313;
-$dark-menu-bg: #1c1c1c;
-
-$dark-primary: #ffb400;
-$dark-primary-hover: #f78f42;
+$dark-card-bg: #1f2937; // темний, але не повністю чорний (Tailwind gray-800)
+$dark-page-bg: #0f172a; // насичений темний синій (Tailwind slate-900)
+$dark-menu-bg: #2a3440; // темний синьо-сірий з холодним тоном — глибокий і стриманий
 
 //Global colors
+$primary: #ffb400;
+$primary-hover: #f78f42;
 $highlight-bg: #f78f421a;
 $shadow: rgba(0, 0, 0, 0.1);
 $green: #7eb942;
 $white: #fff;
-
-//Fonts
-$main-font: 'Arial';
+$black: #131313;

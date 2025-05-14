@@ -1,0 +1,20 @@
+.education {
+  text-align: center;
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}

@@ -1,4 +1,4 @@
-@import '@/styles/abstracts';
+@use '@/styles/abstracts/variables' as *;
 
 body.theme-dark {
   --text: #{$dark-text};
@@ -10,12 +10,5 @@ body.theme-dark {
   --card-bg: #{$dark-card-bg};
   --page-bg: #{$dark-page-bg};
   --menu-bg: #{$dark-menu-bg};
-  --primary: #{$dark-primary};
-  --primary-hover: #{$dark-primary-hover};
   --border: #{$dark-border};
-
-  --white: #{$white};
-  --highlight-bg: #{$highlight-bg};
-  --shadow: #{$shadow};
-  --green: #{$green};
 }

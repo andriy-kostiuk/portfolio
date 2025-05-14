@@ -1,0 +1,43 @@
+.card {
+  text-align: left;
+
+  &:not(&:last-child) {
+    padding-bottom: 32px;
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 10%, transparent);
+  }
+
+  &__left {
+    margin-left: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    @include text-lg-semi;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  &__date {
+    @include text-xs-medium;
+    padding: 4px 12px;
+    color: $primary-hover;
+
+    background: #f78f421a;
+  }
+
+  &__result {
+    @include text-lg-medium;
+    margin-bottom: 8px;
+  }
+
+  &__desc {
+    @include text-base-regular;
+    color: var(--text-light);
+  }
+}

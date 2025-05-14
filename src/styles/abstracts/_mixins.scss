@@ -1,4 +1,4 @@
-@import './variables';
+@use './variables' as *;
 
 @mixin on-tablet {
   @media (min-width: $tablet-width) {
@@ -54,6 +54,25 @@
   &:hover {
     &::after {
       transform: scale(1);
+    }
+  }
+}
+
+@mixin pulse($duration: 1.5s, $scale: 1.05, $opacity: 0.7) {
+  animation: pulse $duration infinite;
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale($scale);
+      opacity: $opacity;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
     }
   }
 }

@@ -1,0 +1,167 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  flex-shrink: 0;
+
+  background: var(--menu-bg);
+  border-radius: 12px;
+  padding: 32px 24px 24px;
+
+  &__avatar {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      background: $primary;
+      border-radius: 50%;
+      border: 5px solid var(--menu-bg);
+      right: 7px;
+      bottom: 0px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__name {
+    @include text-xl-semi;
+    margin: 0;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  &__position {
+    width: fit-content;
+    background: var(--card-bg);
+    color: $primary-hover;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    @include text-xs-medium;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 24px;
+  }
+
+  &__socialLink {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+
+    @include transition(0.4s, scale);
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      path {
+        @include transition(0.4s, fill);
+
+        fill: var(--icon);
+      }
+    }
+
+    &:hover {
+      scale: 1.2;
+
+      svg path {
+        fill: var(--icon-active);
+      }
+    }
+  }
+
+  &__about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__aboutItem {
+    display: flex;
+    justify-content: space-between;
+
+    @include text-sm-regular;
+  }
+
+  &__aboutValue {
+    color: var(--text-light);
+  }
+
+  &__sectionTitle {
+    @include text-base-semi;
+
+    margin-bottom: 20px;
+  }
+
+  &__skills {
+    display: flex;
+    gap: 8px 12px;
+    flex-wrap: wrap;
+  }
+
+  &__skill {
+    @include text-xs-medium;
+
+    padding: 4px 12px;
+    background: var(--card-bg);
+    border-radius: 12px;
+  }
+
+  &__download {
+    border-radius: 8px;
+    padding: 8px 8px 8px 20px;
+    background: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include text-base-medium;
+    border: none;
+    color: $black;
+
+    @include transition(0.4s, background);
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    &:hover {
+      background: $primary-hover;
+
+      svg {
+        @include pulse(1.5s, 1.1, 0.9);
+      }
+    }
+  }
+}
+
+.infoSection {
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}

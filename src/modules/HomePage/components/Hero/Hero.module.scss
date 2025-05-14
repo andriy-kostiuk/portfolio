@@ -1,0 +1,71 @@
+.hero {
+  display: block;
+
+  &__content {
+    padding: 32px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    text-align: center;
+
+    @include on-tablet {
+      padding: 40px;
+    }
+  }
+
+  &__title {
+    @include text-3xl-semi;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+  }
+
+  &__action {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 56px;
+    padding: 4px;
+    padding-left: 24px;
+    border: none;
+    background: $primary;
+    margin: 0 auto;
+
+    @include text-base-medium;
+
+    @include transition;
+
+    &:hover {
+      background: $primary-hover;
+
+      .hero__icon {
+        @include pulse(2s, 1.2, 0.9);
+
+        path {
+          stroke: $primary-hover;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: $black;
+
+    @include transition;
+
+    path {
+      stroke: $primary;
+    }
+  }
+}
