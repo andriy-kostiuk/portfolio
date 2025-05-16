@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './Hero.module.scss';
 import classNames from 'classnames';
-import { SharedSvg } from '@/modules/SharedSvg';
+import { SharedSvg } from '@/modules/Shared/SharedSvg';
 
 export const Hero = () => {
   return (
     <section className={styles.hero}>
-      <div className={classNames(styles.hero__container, 'container')}>
+      <div className={classNames(styles.hero__container)}>
         <div className={classNames(styles.hero__content)}>
           <h2 className={styles.hero__title}>
             I design products that delight and inspire people.

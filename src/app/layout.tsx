@@ -5,10 +5,7 @@ import 'modern-normalize';
 import '@/styles/globals.scss';
 
 import styles from './layout.module.scss';
-import { Header } from '@/modules/Header/Header';
-import { Footer } from '@/modules/Footer/Footer';
-import { InfoSidebar } from '@/modules/InfoSidebar';
-import { Menu } from '@/modules/Menu';
+import { GlobalLayout } from '@/modules/GlobalLayout';
 
 const geistSans = Inter({
   variable: '--font-main',
@@ -30,15 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${styles.page__body} theme-light`}
       >
-        <div className={styles.page__layout}>
-          <InfoSidebar />
-          <div className={styles.page__content}>
-            <Header />
-            {children}
-            <Footer />
-          </div>
-          <Menu />
-        </div>
+        <GlobalLayout>{children}</GlobalLayout>
       </body>
     </html>
   );

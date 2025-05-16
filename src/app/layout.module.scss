@@ -2,22 +2,4 @@
   &__body {
     background: var(--page-bg);
   }
-
-  &__layout {
-    padding-top: 20px;
-
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-
-    max-width: $desktop-width;
-    margin: 0 auto;
-  }
-
-  &__content {
-    display: grid;
-    grid-template-rows: min-content 1fr min-content;
-    min-height: 100vh;
-    width: 100%;
-  }
 }

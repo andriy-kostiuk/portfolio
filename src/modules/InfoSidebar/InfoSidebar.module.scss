@@ -1,12 +1,14 @@
 .info {
-  display: flex;
-  flex-direction: column;
   width: 300px;
   flex-shrink: 0;
-
   background: var(--menu-bg);
   border-radius: 12px;
   padding: 32px 24px 24px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__avatar {
     position: relative;
@@ -47,7 +49,7 @@
   &__position {
     width: fit-content;
     background: var(--card-bg);
-    color: $primary-hover;
+    color: $primary-active;
     padding: 4px 12px;
     border-radius: 50px;
     margin: 0 auto;
@@ -150,7 +152,7 @@
     }
 
     &:hover {
-      background: $primary-hover;
+      background: $primary-active;
 
       svg {
         @include pulse(1.5s, 1.1, 0.9);

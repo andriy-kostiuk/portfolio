@@ -1,32 +1,27 @@
-'use client';
-
-import React, { useState } from 'react';
+import React, { FC } from 'react';
 import styles from './Header.module.scss';
 import classNames from 'classnames';
 import Image from 'next/image';
-import { SharedSvg } from '../SharedSvg';
-import { Theme } from '@/types';
+import { SharedSvg } from '../Shared/SharedSvg';
+import { ThemeToggle } from '../Shared/ThemeToggle';
 
-export const Header = () => {
-  const [, setTheme] = useState<Theme>(Theme.LIGHT);
+interface Props {
+  className?: string;
+  toggleMenu: () => void;
+  toggleInfoSidebar: () => void;
+}
 
-  const changeTheme = () => {
-    setTheme((currentTheme) => {
-      const newTheme = currentTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
-
-      const body = document.body;
-      body.classList.remove(currentTheme);
-      body.classList.add(newTheme);
-
-      return newTheme;
-    });
-  };
-
+export const Header: FC<Props> = ({
+  className,
+  toggleInfoSidebar,
+  toggleMenu,
+}) => {
   return (
-    <header className={styles.header}>
+    <header className={classNames(styles.header, className)}>
       <div className={classNames(styles.header__container, 'container')}>
         <div className={styles.header__content}>
           <button
+            onClick={toggleInfoSidebar}
             className={classNames(
               styles.header__btn,
               styles['header__btn--info']
@@ -43,17 +38,15 @@ export const Header = () => {
           </button>
 
           <div className={styles.header__right}>
-            <button
-              onClick={changeTheme}
+            <ThemeToggle
               className={classNames(
                 styles.header__btn,
                 styles['header__btn--theme']
               )}
-            >
-              <span className='visually-hidden'>Theme</span>
-              <SharedSvg type='theme' />
-            </button>
+            />
+
             <button
+              onClick={toggleMenu}
               className={classNames(
                 styles.header__btn,
                 styles['header__btn--nav']

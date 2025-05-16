@@ -2,6 +2,7 @@
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1200px;
+$max-width: 1600px;
 
 // inline paddings
 $mobile-padding-inline: 16px;
@@ -36,7 +37,7 @@ $dark-menu-bg: #2a3440; // темний синьо-сірий з холодни�
 
 //Global colors
 $primary: #ffb400;
-$primary-hover: #f78f42;
+$primary-active: #f78f42;
 $highlight-bg: #f78f421a;
 $shadow: rgba(0, 0, 0, 0.1);
 $green: #7eb942;

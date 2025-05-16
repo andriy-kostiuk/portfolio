@@ -40,13 +40,13 @@
     @include transition;
 
     &:hover {
-      background: $primary-hover;
+      background: $primary-active;
 
       .hero__icon {
         @include pulse(2s, 1.2, 0.9);
 
         path {
-          stroke: $primary-hover;
+          stroke: $primary-active;
         }
       }
     }

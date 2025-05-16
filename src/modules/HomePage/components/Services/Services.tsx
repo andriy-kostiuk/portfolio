@@ -1,6 +1,7 @@
 import React, { ReactElement, SVGProps } from 'react';
 import styles from './Services.module.scss';
 import classNames from 'classnames';
+import { MainNAvigation } from '@/constants';
 
 interface Service {
   title: string;
@@ -60,7 +61,10 @@ const services: Service[] = [
 
 export const Services = () => {
   return (
-    <section className={styles.services}>
+    <section
+      className={styles.services}
+      id={MainNAvigation.SERVICES.path.slice(2)}
+    >
       <div className='container'>
         <h2 className={classNames(styles.services__title, 'title')}>
           My Services

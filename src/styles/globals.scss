@@ -40,6 +40,9 @@ ul {
 button {
   font-family: inherit;
   cursor: pointer;
+  border: none;
+  background: inherit;
+  padding: 0;
 }
 
 .visually-hidden {
@@ -58,9 +61,8 @@ button {
 
 .container {
   max-width: $desktop-width;
+  width: 100%;
   margin: 0 auto;
-
-  @include page-padding-inline;
 }
 
 .title {
@@ -71,4 +73,11 @@ button {
 .subtitle {
   @include text-sm-regular;
   color: var(--text-light);
+}
+
+.full-width {
+  @include on-desktop {
+    width: 100vw;
+    margin-left: calc(-1 * (100vw - 100%) / 2);
+  }
 }

@@ -1,15 +1,14 @@
-import React, { ReactNode } from 'react';
+import React, { FC } from 'react';
 import styles from './InfoSidebar.module.scss';
 import Image from 'next/image';
 import classNames from 'classnames';
-import { SharedSvg } from '../SharedSvg';
+import { SharedSvg } from '../Shared/SharedSvg';
 
-interface Info {
-  value: string;
-  title: string;
+interface Props {
+  className?: string;
 }
 
-const info: Info[] = [
+const info = [
   {
     title: 'Email:',
     value: 'info@youremail.com',
@@ -40,13 +39,7 @@ const info: Info[] = [
   },
 ];
 
-interface Social {
-  name: string;
-  icon: ReactNode;
-  href: string;
-}
-
-const socials: Social[] = [
+const socials = [
   {
     name: 'Telegram',
     icon: <SharedSvg type='telegram' />,
@@ -94,46 +87,52 @@ const skills = [
   'Server-side Programming',
 ];
 
-export const InfoSidebar = () => {
+export const InfoSidebar: FC<Props> = ({ className }) => {
   return (
-    <aside className={styles.info}>
-      <div className={styles.info__avatar}>
-        <Image src='/img/profile.png' alt='human' width={100} height={100} />
+    <div className={classNames(styles.info, className)}>
+      <div className={styles.info__container}>
+        <div className={styles.info__avatar}>
+          <Image src='/img/profile.png' alt='human' width={100} height={100} />
+        </div>
+        <p className={styles.info__name}>Andrii Kostiuk</p>
+        <p className={styles.info__position}>Fullstack Developer</p>
+
+        <ul className={styles.info__socials}>
+          {socials.map(({ name, icon, href }) => (
+            <li key={name}>
+              <a
+                href={href}
+                target='_blank'
+                className={styles.info__socialLink}
+              >
+                {icon}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <ul className={classNames(styles.info__about, styles.infoSection)}>
+          {info.map(({ title, value }) => (
+            <li key={title} className={styles.info__aboutItem}>
+              <p>{title}</p>
+              <p className={styles.info__aboutValue}>{value}</p>
+            </li>
+          ))}
+        </ul>
+
+        <p className={styles.info__sectionTitle}>Skills</p>
+        <ul className={classNames(styles.info__skills, styles.infoSection)}>
+          {skills.map((skill) => (
+            <li className={styles.info__skill} key={skill}>
+              {skill}
+            </li>
+          ))}
+        </ul>
+
+        <button className={styles.info__download}>
+          Download My CV <SharedSvg type='download' />
+        </button>
       </div>
-      <p className={styles.info__name}>Andrii Kostiuk</p>
-      <p className={styles.info__position}>Fullstack Developer</p>
-
-      <ul className={styles.info__socials}>
-        {socials.map(({ name, icon, href }) => (
-          <li key={name}>
-            <a href={href} target='_blank' className={styles.info__socialLink}>
-              {icon}
-            </a>
-          </li>
-        ))}
-      </ul>
-
-      <ul className={classNames(styles.info__about, styles.infoSection)}>
-        {info.map(({ title, value }) => (
-          <li key={title} className={styles.info__aboutItem}>
-            <p>{title}</p>
-            <p className={styles.info__aboutValue}>{value}</p>
-          </li>
-        ))}
-      </ul>
-
-      <p className={styles.info__sectionTitle}>Skills</p>
-      <ul className={classNames(styles.info__skills, styles.infoSection)}>
-        {skills.map((skill) => (
-          <li className={styles.info__skill} key={skill}>
-            {skill}
-          </li>
-        ))}
-      </ul>
-
-      <button className={styles.info__download}>
-        Download My CV <SharedSvg type='download' />
-      </button>
-    </aside>
+    </div>
   );
 };

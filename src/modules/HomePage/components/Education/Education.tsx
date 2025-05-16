@@ -3,6 +3,7 @@ import styles from './Education.module.scss';
 import classNames from 'classnames';
 import { IEducation } from '@/types';
 import { EducationCard } from '../EducationCard';
+import { MainNAvigation } from '@/constants';
 
 const education: IEducation[] = [
   {
@@ -30,7 +31,10 @@ const education: IEducation[] = [
 
 export const Education = () => {
   return (
-    <section className={styles.education}>
+    <section
+      className={styles.education}
+      id={MainNAvigation.EDUCATION.path.slice(2)}
+    >
       <div className='container'>
         <h2 className={classNames(styles.education__title, 'title')}>
           Education

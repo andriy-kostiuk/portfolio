@@ -1,0 +1,82 @@
+.layout {
+  position: relative;
+
+  &__container {
+    padding-top: 20px;
+    width: 100%;
+    max-width: $max-width;
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    margin: 0 auto;
+
+    @include page-padding-inline;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__main {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: auto;
+  }
+
+  &__header {
+    margin-bottom: 64px;
+
+    @include on-desktop {
+      display: none;
+    }
+  }
+
+  &__sidebar {
+    position: absolute;
+    z-index: 10;
+    top: 100px;
+
+    transform: translateY(-150%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s;
+
+    &--active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    @include on-desktop {
+      position: static;
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transition: none;
+    }
+
+    &--left {
+      left: $mobile-padding-inline;
+
+      @include on-tablet {
+        left: $tablet-padding-inline;
+      }
+    }
+
+    &--right {
+      right: $mobile-padding-inline;
+
+      @include on-tablet {
+        right: $tablet-padding-inline;
+      }
+    }
+  }
+}

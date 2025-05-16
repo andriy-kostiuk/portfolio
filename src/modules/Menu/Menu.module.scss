@@ -1,0 +1,99 @@
+.menu {
+  background: var(--menu-bg);
+  width: 88px;
+  flex-shrink: 0;
+  padding: 20px;
+  border-radius: 12px;
+
+  @include on-desktop {
+    height: 1016px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__theme {
+    display: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    padding: 6px;
+    background: var(--card-bg);
+
+    @include transition(0.4s, background);
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      path {
+        @include transition;
+        fill: var(--icon);
+      }
+    }
+
+    &:hover {
+      background: $primary-active;
+
+      svg {
+        path {
+          fill: var(--icon-active);
+        }
+      }
+    }
+
+    @include on-desktop {
+      display: block;
+    }
+  }
+
+  &__nav {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &__navList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__link {
+    display: block;
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 0.5rem;
+
+    @include transition(0.4s, background);
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      path {
+        fill: var(--icon);
+
+        @include transition;
+      }
+    }
+
+    &--active,
+    &:hover {
+      background: $primary-active;
+
+      svg {
+        width: 100%;
+        height: 100%;
+
+        path {
+          fill: var(--icon-active);
+        }
+      }
+    }
+  }
+}
