@@ -15,7 +15,7 @@ interface Props {
   images?: string[];
 }
 
-export const Gallery: FC<Props> = ({ images }) => {
+export const Gallery: FC<Props> = ({}) => {
   return (
     <Swiper
       spaceBetween={30}
@@ -28,16 +28,16 @@ export const Gallery: FC<Props> = ({ images }) => {
       className={styles.gallery}
     >
       <SwiperSlide className={styles.gallery__slide}>
-        <img src='https://swiperjs.com/demos/images/nature-1.jpg' />
+        {/* <img src='https://swiperjs.com/demos/images/nature-1.jpg' /> */}
       </SwiperSlide>
       <SwiperSlide className={styles.gallery__slide}>
-        <img src='https://swiperjs.com/demos/images/nature-2.jpg' />
+        {/* <img src='https://swiperjs.com/demos/images/nature-2.jpg' /> */}
       </SwiperSlide>
       <SwiperSlide className={styles.gallery__slide}>
-        <img src='https://swiperjs.com/demos/images/nature-3.jpg' />
+        {/* <img src='https://swiperjs.com/demos/images/nature-3.jpg' /> */}
       </SwiperSlide>
       <SwiperSlide className={styles.gallery__slide}>
-        <img src='https://swiperjs.com/demos/images/nature-4.jpg' />
+        {/* <img src='https://swiperjs.com/demos/images/nature-4.jpg' /> */}
       </SwiperSlide>
     </Swiper>
   );
