@@ -29,13 +29,9 @@ This portfolio is built with modern web technologies to showcase my professional
 - **Dark/Light Mode**: Theme toggle for user preference
 - **Performance Optimized**: Fast loading times and smooth animations
 
-## 📱 Screenshots
-
-*[Screenshots of the portfolio website across different devices and sections would be included here]*
-
 ## 🚀 Live Demo
 
-Visit my portfolio website: [andriy-kostiuk.com](#)
+Visit my portfolio website: [andriy-kostiuk.com](https://portfolio-azure-theta-56.vercel.app/)
 
 ## 🔧 Setup & Installation
 
