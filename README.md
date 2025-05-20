@@ -1,6 +1,6 @@
 # Andriy Kostiuk - Portfolio Website
 
-This repository contains my personal portfolio website showcasing my skills, projects, and experience as a web developer.
+This repository contains my personal portfolio website showcasing my skills, projects, and experience as a web developer. Built with Next.js for optimal performance and SEO.
 
 ## 📋 Overview
 
@@ -13,6 +13,7 @@ This portfolio is built with modern web technologies to showcase my professional
 
 ## 🛠️ Technologies Used
 
+- **Next.js** - React framework for server-side rendering and static site generation
 - **HTML5** - Semantic markup structure
 - **CSS3** - Modern styling with flexbox/grid layouts
 - **JavaScript** - Interactive elements and dynamic content
@@ -21,6 +22,7 @@ This portfolio is built with modern web technologies to showcase my professional
 
 ## 🎯 Features
 
+- **Next.js Framework**: Utilizing server-side rendering for improved SEO and performance
 - **Responsive Layout**: Optimized viewing experience across devices (mobile phones, tablets, desktops)
 - **Modern UI/UX**: Clean, intuitive interface with smooth navigation
 - **Project Showcase**: Highlighted work samples with descriptions and links
@@ -50,17 +52,13 @@ cd portfolio
 npm install
 
 # Run the development server
-npm start
+npm run dev
 ```
 
 ## 📬 Contact
 
 Feel free to reach out for collaboration or opportunities:
 
-- **Email**: [your-email@example.com]
-- **LinkedIn**: [linkedin.com/in/andriy-kostiuk](#)
+- **Email**: andriykostiuk1@gmail.com
+- **LinkedIn**: [linkedin.com/in/andriy-kostiuk](https://www.linkedin.com/in/andrii-kostiuk-3141592653589793238/)
 - **GitHub**: [github.com/andriy-kostiuk](https://github.com/andriy-kostiuk)
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
