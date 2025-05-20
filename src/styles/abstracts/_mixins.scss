@@ -30,11 +30,20 @@
   }
 }
 
-@mixin transition($duration: 0.4s, $property: all) {
-  transition: $property $duration;
+@mixin transition(
+  $duration: 0.4s,
+  $properties: all,
+  $timing: ease,
+  $delay: 0s
+) {
+  @if type-of($properties) == 'list' {
+    transition: join((), $properties, comma) $duration $timing $delay;
+  } @else {
+    transition: $properties $duration $timing $delay;
+  }
 }
 
-@mixin underline-animation {
+@mixin underline-animation($color: $primary-active) {
   position: relative;
 
   &::after {
@@ -42,7 +51,7 @@
     content: '';
     width: 100%;
     height: 2px;
-    background-color: $secondary;
+    background-color: $color;
     bottom: -5px;
     left: 0;
 

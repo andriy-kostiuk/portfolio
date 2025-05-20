@@ -1,14 +1,42 @@
 .hero {
   display: block;
 
-  &__content {
-    padding: 32px;
+  &__container {
     background: var(--card-bg);
     border-radius: 12px;
+
+    @include on-tablet {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+    }
+  }
+
+  &__content {
+    padding: 32px;
     text-align: center;
 
     @include on-tablet {
+      text-align: left;
       padding: 40px;
+    }
+  }
+
+  &__photo {
+    display: none;
+    position: relative;
+
+    @include on-tablet {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 
@@ -16,6 +44,14 @@
     @include text-3xl-semi;
     margin: 0;
     margin-bottom: 1rem;
+
+    @include on-desktop {
+      @include text-5xl-semi;
+    }
+
+    span {
+      color: $primary;
+    }
   }
 
   &__subtitle {
@@ -24,6 +60,7 @@
   }
 
   &__action {
+    width: fit-content;
     min-height: 44px;
     display: flex;
     align-items: center;
@@ -36,8 +73,11 @@
     margin: 0 auto;
 
     @include text-base-medium;
-
     @include transition;
+
+    @include on-tablet {
+      margin: 0;
+    }
 
     &:hover {
       background: $primary-active;

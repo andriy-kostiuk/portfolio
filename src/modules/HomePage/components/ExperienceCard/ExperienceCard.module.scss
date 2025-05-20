@@ -1,25 +1,36 @@
 .card {
   text-align: left;
-
   background: var(--card-bg);
   padding: 24px;
   gap: 32px;
   border-radius: 12px;
 
+  @include on-tablet {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+  }
+
   &__left {
-    margin-left: 16px;
     margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    @include on-tablet {
+      align-items: flex-start;
+      margin: 0;
+    }
   }
 
   &__duration {
-    @include text-lg-semi;
+    @include text-base-regular;
     padding: 4px 12px;
-    color: $white;
     border-radius: 0.5rem;
 
-    background: $primary-active;
+    background: $highlight-bg;
     width: fit-content;
-    margin-bottom: 12px;
   }
 
   &__wrapper {
@@ -54,6 +65,7 @@
 
   &__position {
     @include text-lg-medium;
+    color: $primary-active;
     margin: 0;
   }
 

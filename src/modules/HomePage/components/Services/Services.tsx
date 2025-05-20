@@ -35,7 +35,11 @@ const services: Service[] = [
         </g>
       </svg>
     ),
-    list: ['create app1', 'create app2', 'create app3'],
+    list: [
+      'Responsive and accessible UI with React and Next.js',
+      'State management using Redux Toolkit and Context API',
+      'Reusable components and modular SCSS architecture',
+    ],
   },
   {
     title: 'Backend Development',
@@ -55,7 +59,11 @@ const services: Service[] = [
         </g>
       </svg>
     ),
-    list: ['create app1', 'create app2', 'create app3'],
+    list: [
+      'REST API and server logic with Node.js and Express',
+      'Real-time features using WebSocket (Socket.IO)',
+      'PostgreSQL database integration with Sequelize ORM',
+    ],
   },
 ];
 

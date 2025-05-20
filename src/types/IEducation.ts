@@ -4,4 +4,5 @@ export interface IEducation {
   date: string;
   result: string;
   desc: string;
+  certificateLinks?: { label: string; url: string }[];
 }

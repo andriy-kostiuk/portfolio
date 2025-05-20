@@ -46,7 +46,7 @@ export const GlobalLayout: FC<Props> = ({ children }) => {
 
   return (
     <div className={styles.layout}>
-      <div className={styles.layout__container}>
+      <ThemeProvider>
         <aside
           ref={infoSidebarRef}
           className={classNames(
@@ -60,13 +60,11 @@ export const GlobalLayout: FC<Props> = ({ children }) => {
           <InfoSidebar />
         </aside>
         <div className={styles.layout__content}>
-          <ThemeProvider>
-            <Header
-              className={styles.layout__header}
-              toggleInfoSidebar={toggleInfoSidebar}
-              toggleMenu={toggleMenu}
-            />
-          </ThemeProvider>
+          <Header
+            className={styles.layout__header}
+            toggleInfoSidebar={toggleInfoSidebar}
+            toggleMenu={toggleMenu}
+          />
           <main className={styles.layout__main}>{children}</main>
           <Footer />
         </div>
@@ -80,11 +78,9 @@ export const GlobalLayout: FC<Props> = ({ children }) => {
             }
           )}
         >
-          <ThemeProvider>
-            <Menu />
-          </ThemeProvider>
+          <Menu />
         </aside>
-      </div>
+      </ThemeProvider>
     </div>
   );
 };

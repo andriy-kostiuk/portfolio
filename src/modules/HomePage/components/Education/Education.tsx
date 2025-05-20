@@ -5,27 +5,55 @@ import { IEducation } from '@/types';
 import { EducationCard } from '../EducationCard';
 import { MainNAvigation } from '@/constants';
 
-const education: IEducation[] = [
+const formalEducation: IEducation[] = [
   {
-    title: 'University of Toronto',
-    status: 'student',
-    date: 'Jan 1016 - Dec 2021',
-    result: 'Certificate of web training',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.',
+    title: 'Kyiv National University of Construction and Architecture',
+    status: 'Student',
+    date: '2015 – 2019',
+    result: "Master's Degree in Industrial and Civil Engineering",
+    desc: `Studied engineering principles, structural analysis, and project management. 
+           These skills shaped my logical thinking and attention to detail — qualities I now apply in software development.`,
+  },
+];
+
+const courses: IEducation[] = [
+  {
+    title: 'Mate Academy',
+    status: 'Fullstack Student',
+    date: '2024 – 2025',
+    result: 'Fullstack Web Development Course',
+    desc: `Learned modern web development tools such as React, Node.js, PostgreSQL, and TypeScript. Built fullstack apps using best practices and code reviews.`,
+    certificateLinks: [
+      {
+        label: 'Mate Academy Certificate',
+        url: 'https://drive.google.com/file/d/1pJjAFfgRIN-UbCcs3woML5IM3WPc0kZG/view?usp=sharing',
+      },
+    ],
   },
   {
-    title: 'University of Toronto2',
-    status: 'student',
-    date: 'Jan 1016 - Dec 2021',
-    result: 'Certificate of web training',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.',
+    title: 'ITVDN / CodeWars',
+    status: 'Self-Learning',
+    date: '2022 – 2025',
+    result: 'React, JavaScript, Algorithms',
+    desc: `Completed multiple courses on React, JavaScript, and OOP. Solved 266+ CodeWars katas to improve algorithmic skills.`,
+    certificateLinks: [
+      {
+        label: 'React',
+        url: 'https://drive.google.com/file/d/1DsX5LSqlcWLMh0tMJrXm5h5ZL0jtd64g/view?usp=drive_link',
+      },
+
+      {
+        label: 'JavaScript',
+        url: 'https://drive.google.com/file/d/187GgrAjI-GDvDaXnAx1bEe5tIkfYosFi/view?usp=drive_link',
+      },
+    ],
   },
   {
-    title: 'University of Toronto3',
-    status: 'student',
-    date: 'Jan 1016 - Dec 2021',
-    result: 'Certificate of web training',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.',
+    title: 'HTML Academy',
+    status: 'Frontend Student',
+    date: '2021 - 2022',
+    result: 'Frontend Development Course',
+    desc: `Practiced responsive design, semantic HTML, and CSS (BEM methodology), improving my frontend development skills.`,
   },
 ];
 
@@ -40,12 +68,23 @@ export const Education = () => {
           Education
         </h2>
         <p className={classNames(styles.education__subtitle, 'subtitle')}>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. lorem ipsum
+          My technical education and intensive self-learning through courses
+          have equipped me with the skills to build scalable, maintainable, and
+          efficient web applications.
         </p>
 
+        <h3 className={styles.education__groupTitle}>
+          Courses & Certifications
+        </h3>
         <ul className={styles.education__list}>
-          {education.map((item) => (
+          {courses.map((item) => (
+            <EducationCard key={item.title} item={item} />
+          ))}
+        </ul>
+
+        <h3 className={styles.education__groupTitle}>Formal Education</h3>
+        <ul className={styles.education__list}>
+          {formalEducation.map((item) => (
             <EducationCard key={item.title} item={item} />
           ))}
         </ul>

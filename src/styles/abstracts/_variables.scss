@@ -19,6 +19,7 @@ $light-icon-active: #111111; // насичений чорний
 $light-icon-bg: #dce3f2; // світлий блакитний акцент
 
 $light-card-bg: #ffffff; // чисто білий
+$light-card-bg-rgb: 255, 255, 255;
 $light-page-bg: #f0f4ff; // дуже світлий блакитний фон
 $light-menu-bg: #dbe6f0; // світлий приглушений блакитно-сірий — елегантний і м’який
 
@@ -32,6 +33,7 @@ $dark-icon-active: #ffffff; // яскравий
 $dark-icon-bg: #334155; // холодний насичений синій (Tailwind slate-800)
 
 $dark-card-bg: #1f2937; // темний, але не повністю чорний (Tailwind gray-800)
+$dark-card-bg-rgb: 31, 41, 55;
 $dark-page-bg: #0f172a; // насичений темний синій (Tailwind slate-900)
 $dark-menu-bg: #2a3440; // темний синьо-сірий з холодним тоном — глибокий і стриманий
 
@@ -43,3 +45,5 @@ $shadow: rgba(0, 0, 0, 0.1);
 $green: #7eb942;
 $white: #fff;
 $black: #131313;
+$error: #ff3333;
+$success: #5cb85c;

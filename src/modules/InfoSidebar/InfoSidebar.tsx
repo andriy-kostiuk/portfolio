@@ -11,31 +11,27 @@ interface Props {
 const info = [
   {
     title: 'Email:',
-    value: 'info@youremail.com',
+    value: 'andriykostiuk1@gmail.com',
   },
   {
     title: 'Phone:',
-    value: '+880 16429 24081',
+    value: '+38 068 130 9316',
   },
   {
     title: 'Residence:',
-    value: 'Bangladesh',
+    value: 'Ukraine',
   },
   {
     title: 'City:',
-    value: 'Dhaka',
+    value: 'Kyiv',
   },
   {
     title: 'Age:',
-    value: '24 Years',
+    value: '29 Years',
   },
   {
-    title: 'Freelance:',
-    value: 'Available',
-  },
-  {
-    title: 'Language:',
-    value: 'English, Bangla',
+    title: 'English:',
+    value: 'Intermediate',
   },
 ];
 
@@ -43,17 +39,17 @@ const socials = [
   {
     name: 'Telegram',
     icon: <SharedSvg type='telegram' />,
-    href: '',
+    href: 'https://t.me/Andrii4',
   },
   {
-    name: 'GitHab',
+    name: 'GitHub',
     icon: <SharedSvg type='gitHub' />,
-    href: '',
+    href: 'https://github.com/andriy-kostiuk',
   },
   {
     name: 'LinkedIn',
     icon: <SharedSvg type='linkedin' />,
-    href: '',
+    href: 'https://www.linkedin.com/in/andrii-kostiuk-3141592653589793238',
   },
 ];
 
@@ -92,7 +88,12 @@ export const InfoSidebar: FC<Props> = ({ className }) => {
     <div className={classNames(styles.info, className)}>
       <div className={styles.info__container}>
         <div className={styles.info__avatar}>
-          <Image src='/img/profile.png' alt='human' width={100} height={100} />
+          <Image
+            src='/img/profile.png'
+            alt='Andrii Kostiuk'
+            width={100}
+            height={100}
+          />
         </div>
         <p className={styles.info__name}>Andrii Kostiuk</p>
         <p className={styles.info__position}>Fullstack Developer</p>
@@ -103,6 +104,7 @@ export const InfoSidebar: FC<Props> = ({ className }) => {
               <a
                 href={href}
                 target='_blank'
+                rel='noopener noreferrer'
                 className={styles.info__socialLink}
               >
                 {icon}
@@ -112,12 +114,37 @@ export const InfoSidebar: FC<Props> = ({ className }) => {
         </ul>
 
         <ul className={classNames(styles.info__about, styles.infoSection)}>
-          {info.map(({ title, value }) => (
-            <li key={title} className={styles.info__aboutItem}>
-              <p>{title}</p>
-              <p className={styles.info__aboutValue}>{value}</p>
-            </li>
-          ))}
+          {info.map(({ title, value }) => {
+            const renderValue = () => {
+              if (title === 'Email:') {
+                return (
+                  <a href={`mailto:${value}`} className={styles.info__link}>
+                    {value}
+                  </a>
+                );
+              }
+
+              if (title === 'Phone:') {
+                return (
+                  <a
+                    href={`tel:${value.replace(/\s+/g, '')}`}
+                    className={styles.info__link}
+                  >
+                    {value}
+                  </a>
+                );
+              }
+
+              return value;
+            };
+
+            return (
+              <li key={title} className={styles.info__aboutItem}>
+                <p>{title}</p>
+                <p className={styles.info__aboutValue}>{renderValue()}</p>
+              </li>
+            );
+          })}
         </ul>
 
         <p className={styles.info__sectionTitle}>Skills</p>
@@ -129,9 +156,13 @@ export const InfoSidebar: FC<Props> = ({ className }) => {
           ))}
         </ul>
 
-        <button className={styles.info__download}>
+        <a
+          href='/Andrii_Kostiuk_CV_fullstack.pdf'
+          download
+          className={styles.info__download}
+        >
           Download My CV <SharedSvg type='download' />
-        </button>
+        </a>
       </div>
     </div>
   );

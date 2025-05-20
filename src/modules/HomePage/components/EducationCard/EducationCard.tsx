@@ -7,7 +7,7 @@ interface Props {
 }
 
 export const EducationCard: FC<Props> = ({ item }) => {
-  const { title, status, date, result, desc } = item;
+  const { title, status, date, result, desc, certificateLinks } = item;
 
   return (
     <li className={styles.card}>
@@ -20,7 +20,25 @@ export const EducationCard: FC<Props> = ({ item }) => {
       </div>
 
       <div className={styles.card__right}>
-        <p className={styles.card__result}>{result}</p>
+        <p className={styles.card__result}>
+          {result}
+          {certificateLinks && certificateLinks.length > 0 && (
+            <span className={styles.card__certificates}>
+              {' – '}
+              {certificateLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.url}
+                  target='_blank'
+                  className={styles.card__certificate}
+                >
+                  {link.label}
+                  {index < certificateLinks.length - 1 ? ', ' : ''}
+                </a>
+              ))}
+            </span>
+          )}
+        </p>
         <p className={styles.card__desc}>{desc}</p>
       </div>
     </li>

@@ -6,6 +6,12 @@
     border-bottom: 1px solid color-mix(in srgb, var(--border) 10%, transparent);
   }
 
+  @include on-tablet {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+  }
+
   &__left {
     margin-left: 16px;
     margin-bottom: 24px;
@@ -21,6 +27,10 @@
     display: flex;
     gap: 16px;
     align-items: center;
+
+    @include on-tablet {
+      justify-content: space-between;
+    }
   }
 
   &__date {
@@ -28,12 +38,18 @@
     padding: 4px 12px;
     color: $primary-active;
 
-    background: #f78f421a;
+    background: $highlight-bg;
   }
 
   &__result {
     @include text-lg-medium;
     margin-bottom: 8px;
+  }
+
+  &__certificate {
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__desc {

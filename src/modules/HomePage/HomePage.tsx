@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './HomePage.module.scss';
-import { Hero } from './components/Hero';
+import { Hero } from '../Shared/Hero';
 import { Services } from './components/Services';
 import { Education } from './components/Education';
 import { Experience } from './components/Experience';

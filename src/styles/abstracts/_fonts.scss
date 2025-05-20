@@ -39,6 +39,11 @@
   line-height: 40px;
 }
 
+@mixin text-5xl {
+  font-size: 48px;
+  line-height: 56px;
+}
+
 // Weight
 @mixin weight-regular {
   font-weight: 400;
@@ -82,9 +87,14 @@
   @include weight-semi;
 }
 
+@mixin text-lg-regular {
+  @include text-lg;
+  @include weight-regular;
+}
+
 @mixin text-lg-medium {
   @include text-lg;
-  @include weight-medium();
+  @include weight-medium;
 }
 
 @mixin text-lg-semi {
@@ -97,6 +107,11 @@
   @include weight-semi;
 }
 
+@mixin text-2xl-semi {
+  @include text-2xl;
+  @include weight-semi;
+}
+
 @mixin text-2xl-bold {
   @include text-2xl;
   @include weight-bold;
@@ -104,5 +119,20 @@
 
 @mixin text-3xl-semi {
   @include text-3xl;
+  @include weight-semi;
+}
+
+@mixin text-3xl-bold {
+  @include text-3xl;
+  @include weight-semi;
+}
+
+@mixin text-4xl-bold {
+  @include text-4xl;
+  @include weight-bold;
+}
+
+@mixin text-5xl-semi {
+  @include text-5xl;
   @include weight-semi;
 }

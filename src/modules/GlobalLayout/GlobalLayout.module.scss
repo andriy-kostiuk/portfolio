@@ -1,16 +1,17 @@
 .layout {
-  position: relative;
+  min-height: max(100vh, 1300px);
+  height: 100%;
+  padding-top: 20px;
+  width: 100%;
+  max-width: $max-width;
+  display: flex;
+  gap: 32px;
+  margin: 0 auto;
 
-  &__container {
-    padding-top: 20px;
-    width: 100%;
-    max-width: $max-width;
-    display: flex;
-    align-items: flex-start;
-    gap: 32px;
-    margin: 0 auto;
+  @include page-padding-inline;
 
-    @include page-padding-inline;
+  @include on-desktop {
+    min-height: 100vh;
   }
 
   &__content {
@@ -19,6 +20,7 @@
     justify-content: space-between;
     flex: 1;
     min-width: 0;
+    gap: 64px;
   }
 
   &__main {
@@ -28,8 +30,6 @@
   }
 
   &__header {
-    margin-bottom: 64px;
-
     @include on-desktop {
       display: none;
     }
@@ -47,13 +47,6 @@
 
     transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s;
 
-    &--active {
-      transform: translateY(0);
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
-
     @include on-desktop {
       position: static;
       transform: translateY(0);
@@ -61,6 +54,14 @@
       visibility: visible;
       pointer-events: auto;
       transition: none;
+      margin-bottom: 20px;
+    }
+
+    &--active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
     }
 
     &--left {

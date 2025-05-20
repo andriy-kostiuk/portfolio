@@ -1,4 +1,10 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from 'react';
 import { Theme } from '@/types';
 
 interface ThemeContextType {
@@ -8,8 +14,23 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+const getInitialTheme = (): Theme => {
+  if (typeof window !== 'undefined') {
+    const saved = localStorage.getItem('theme');
+    if (saved && Object.values(Theme).includes(saved as Theme)) {
+      return saved as Theme;
+    }
+  }
+  return Theme.LIGHT;
+};
+
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>(Theme.LIGHT);
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+
+  useEffect(() => {
+    document.body.classList.remove(Theme.LIGHT);
+    document.body.classList.add(theme);
+  }, [theme]);
 
   const toggleTheme = () => {
     setTheme((current) => {
@@ -17,6 +38,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
       document.body.classList.remove(current);
       document.body.classList.add(newTheme);
+      localStorage.setItem('theme', newTheme);
 
       return newTheme;
     });

@@ -14,7 +14,33 @@ const geistSans = Inter({
 
 export const metadata: Metadata = {
   title: 'Portfolio | Andrii Kostiuk',
-  description: 'portfolio',
+  description: 'Andrii Kostiuk portfolio',
+  icons: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '96x96',
+      url: '/favicon-96x96.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      url: '/favicon.svg',
+    },
+    {
+      rel: 'shortcut icon',
+      url: '/favicon.ico',
+    },
+    {
+      rel: 'apple-touch-icon',
+      sizes: '180x180',
+      url: '/apple-touch-icon.png',
+    },
+  ],
+  manifest: '/site.webmanifest',
+  other: {
+    'apple-mobile-web-app-title': 'Portfolio | Andrii Kostiuk',
+  },
 };
 
 export default function RootLayout({

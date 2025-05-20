@@ -173,8 +173,10 @@ export const Experience = () => {
       <div className='container'>
         <h2 className={classNames(styles.exp__title, 'title')}>Experience</h2>
         <p className={classNames(styles.exp__subtitle, 'subtitle')}>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. lorem ipsum
+          My background includes full stack development for real-world projects,
+          along with previous engineering experience. I focus on building
+          scalable, maintainable, and user-friendly applications using modern
+          technologies.
         </p>
 
         <ul className={styles.exp__list}>
