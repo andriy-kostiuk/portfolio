@@ -10,9 +10,13 @@ export interface ProjectPreview {
 export interface Project {
   id: string;
   title: string;
-  img: string[];
+  subtitle: string;
+  images: string[];
   demo: string;
   gitHub: string;
   desc: string[];
+  features: string[];
   technologies: string[];
+  goal: string;
+  solution: string;
 }

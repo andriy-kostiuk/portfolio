@@ -136,3 +136,8 @@
   @include text-5xl;
   @include weight-semi;
 }
+
+@mixin text-5xl-bold {
+  @include text-5xl;
+  @include weight-bold;
+}
