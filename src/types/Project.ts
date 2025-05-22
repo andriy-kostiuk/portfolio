@@ -14,6 +14,7 @@ export interface Project {
   images: string[];
   demo: string;
   gitHub: string;
+  descShort: string;
   desc: string[];
   features: string[];
   technologies: string[];

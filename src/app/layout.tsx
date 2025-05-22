@@ -4,6 +4,13 @@ import 'modern-normalize';
 
 import '@/styles/globals.scss';
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/scss/navigation';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
+
 import styles from './layout.module.scss';
 import { GlobalLayout } from '@/modules/GlobalLayout';
 

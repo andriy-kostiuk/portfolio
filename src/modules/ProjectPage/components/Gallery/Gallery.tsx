@@ -6,10 +6,6 @@ import { EffectFade, Navigation, Pagination } from 'swiper/modules';
 
 import styles from './Gallery.module.scss';
 
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import Image from 'next/image';
 import classNames from 'classnames';
 import { SharedSvg } from '@/modules/Shared/SharedSvg';

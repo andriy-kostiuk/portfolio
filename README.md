@@ -1,4 +1,4 @@
-# Andriy Kostiuk - Portfolio Website
+# Andrii Kostiuk - Portfolio Website
 
 This repository contains my personal portfolio website showcasing my skills, projects, and experience as a web developer. Built with Next.js for optimal performance and SEO.
 
