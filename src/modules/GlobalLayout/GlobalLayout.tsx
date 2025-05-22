@@ -1,6 +1,6 @@
 'use client';
 
-import React, { FC, ReactNode, useRef, useState } from 'react';
+import React, { FC, ReactNode, useEffect, useRef, useState } from 'react';
 
 import styles from './GlobalLayout.module.scss';
 import { InfoSidebar } from '../InfoSidebar';
@@ -21,6 +21,24 @@ export const GlobalLayout: FC<Props> = ({ children }) => {
 
   const infoSidebarRef = useRef<HTMLElement>(null);
   const menuRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const menuElement = menuRef.current;
+    const handleClickInsideMenu = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+
+      if (menuRef.current?.contains(target) && target.closest('a')) {
+        setIsActiveMenu(false);
+        setIsActiveInfoSidebar(false);
+      }
+    };
+
+    menuElement?.addEventListener('click', handleClickInsideMenu);
+
+    return () => {
+      menuElement?.removeEventListener('click', handleClickInsideMenu);
+    };
+  }, []);
 
   const toggleInfoSidebar = () => {
     setIsActiveInfoSidebar((prev) => !prev);
