@@ -10,12 +10,14 @@ import { Menu } from '../Menu';
 import classNames from 'classnames';
 import { useClickOutside } from '@/hooks';
 import { ThemeProvider } from '@/context/ThemeContext';
+import { Theme } from '@/types';
 
 interface Props {
   children: ReactNode;
+  theme: Theme;
 }
 
-export const GlobalLayout: FC<Props> = ({ children }) => {
+export const GlobalLayout: FC<Props> = ({ children, theme }) => {
   const [isActiveInfoSidebar, setIsActiveInfoSidebar] = useState(false);
   const [isActiveMenu, setIsActiveMenu] = useState(false);
 
@@ -64,7 +66,7 @@ export const GlobalLayout: FC<Props> = ({ children }) => {
 
   return (
     <div className={styles.layout}>
-      <ThemeProvider>
+      <ThemeProvider initialTheme={theme}>
         <aside
           ref={infoSidebarRef}
           className={classNames(

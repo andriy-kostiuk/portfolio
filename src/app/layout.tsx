@@ -13,6 +13,8 @@ import 'swiper/css/pagination';
 
 import styles from './layout.module.scss';
 import { GlobalLayout } from '@/modules/GlobalLayout';
+import { cookies } from 'next/headers';
+import { Theme } from '@/types';
 
 const geistSans = Inter({
   variable: '--font-main',
@@ -50,17 +52,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = cookies();
+  const theme = (await cookieStore).get('theme')?.value as Theme | undefined;
+  const serverTheme = theme === Theme.DARK ? Theme.DARK : Theme.LIGHT;
+
   return (
     <html lang='en' className={styles.page}>
       <body
-        className={`${geistSans.variable} ${styles.page__body} theme-light`}
+        className={`${geistSans.variable} ${styles.page__body} ${serverTheme}`}
       >
-        <GlobalLayout>{children}</GlobalLayout>
+        <GlobalLayout theme={serverTheme}>{children}</GlobalLayout>
       </body>
     </html>
   );

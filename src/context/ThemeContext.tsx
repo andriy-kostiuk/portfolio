@@ -5,6 +5,7 @@ import {
   ReactNode,
   useEffect,
 } from 'react';
+import Cookies from 'js-cookie';
 import { Theme } from '@/types';
 
 interface ThemeContextType {
@@ -14,34 +15,23 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-const getInitialTheme = (): Theme => {
-  if (typeof window !== 'undefined') {
-    const saved = localStorage.getItem('theme');
-    if (saved && Object.values(Theme).includes(saved as Theme)) {
-      return saved as Theme;
-    }
-  }
-  return Theme.LIGHT;
-};
+interface Props {
+  children: ReactNode;
+  initialTheme: Theme;
+}
 
-export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+export const ThemeProvider = ({ children, initialTheme }: Props) => {
+  const [theme, setTheme] = useState<Theme>(initialTheme);
 
   useEffect(() => {
-    document.body.classList.remove(Theme.LIGHT);
+    document.body.classList.remove(Theme.LIGHT, Theme.DARK);
     document.body.classList.add(theme);
+
+    Cookies.set('theme', theme, { expires: 365 });
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((current) => {
-      const newTheme = current === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
-
-      document.body.classList.remove(current);
-      document.body.classList.add(newTheme);
-      localStorage.setItem('theme', newTheme);
-
-      return newTheme;
-    });
+    setTheme((prev) => (prev === Theme.LIGHT ? Theme.DARK : Theme.LIGHT));
   };
 
   return (
