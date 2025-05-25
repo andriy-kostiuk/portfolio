@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "projects": "Projects"
+  },
+  "home": {
+    "title": "Welcome",
+    "description": "This is our multilingual website"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "notFound": "Project not found"
+  }
+}

@@ -13,6 +13,7 @@ export const NotFoundPage = () => {
         alt='404'
         width={1000}
         height={550}
+        priority
       />
       <h1 className={styles.notFound__title}>404 Error</h1>
       <p className={styles.notFound__subtitle}>Page not found</p>

@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import { SharedSvg } from '../Shared/SharedSvg';
 import { ThemeToggle } from '../Shared/ThemeToggle';
+import { LocaleToggle } from '../Shared/LocaleToggle';
 
 interface Props {
   className?: string;
@@ -38,6 +39,7 @@ export const Header: FC<Props> = ({
           </button>
 
           <div className={styles.header__right}>
+            <LocaleToggle />
             <ThemeToggle
               className={classNames(
                 styles.header__btn,

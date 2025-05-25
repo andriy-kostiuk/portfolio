@@ -1,5 +1,15 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { GlobalLayout } from '@/modules/GlobalLayout';
+import { cookies } from 'next/headers';
+import { Theme } from '@/types';
+
+import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
+
+import styles from './layout.module.scss';
+
 import 'modern-normalize';
 
 import '@/styles/globals.scss';
@@ -10,11 +20,6 @@ import 'swiper/scss/navigation';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
-
-import styles from './layout.module.scss';
-import { GlobalLayout } from '@/modules/GlobalLayout';
-import { cookies } from 'next/headers';
-import { Theme } from '@/types';
 
 const geistSans = Inter({
   variable: '--font-main',
@@ -52,21 +57,33 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
-  children,
-}: Readonly<{
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'uk' }];
+}
+
+interface Props {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function RootLayout({ children, params }: Props) {
   const cookieStore = cookies();
   const theme = (await cookieStore).get('theme')?.value as Theme | undefined;
   const serverTheme = theme === Theme.DARK ? Theme.DARK : Theme.LIGHT;
 
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
-    <html lang='en' className={styles.page}>
+    <html lang={locale} className={styles.page}>
       <body
         className={`${geistSans.variable} ${styles.page__body} ${serverTheme}`}
       >
-        <GlobalLayout theme={serverTheme}>{children}</GlobalLayout>
+        <NextIntlClientProvider>
+          <GlobalLayout theme={serverTheme}>{children}</GlobalLayout>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

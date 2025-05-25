@@ -49,6 +49,7 @@ export const Hero: FC<Props> = ({ link = true }) => {
             width={325}
             height={460}
             alt='Andrii Kostiuk'
+            priority
           />
         </div>
       </div>
