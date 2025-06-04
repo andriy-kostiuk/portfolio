@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectCreative } from 'swiper/modules';
-import { MainNAvigation } from '@/constants';
+import { MainNavigation } from '@/constants';
 
 import styles from './Projects.module.scss';
 import { SharedSvg } from '@/modules/Shared/SharedSvg';
@@ -27,7 +27,7 @@ export const Projects = () => {
   return (
     <section
       className={styles.projects}
-      id={MainNAvigation.PROJECTS.path.slice(2)}
+      id={MainNavigation.PROJECTS.path.slice(2)}
     >
       <div className='container'>
         <h2 className={classNames(styles.projects__title, 'title')}>

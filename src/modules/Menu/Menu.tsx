@@ -3,7 +3,7 @@
 import React, { FC } from 'react';
 import styles from './Menu.module.scss';
 import { ThemeToggle } from '../Shared/ThemeToggle';
-import { MainNAvigation } from '@/constants';
+import { MainNavigation } from '@/constants';
 import { SharedSvg } from '../Shared/SharedSvg';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -15,27 +15,27 @@ interface Props {
 
 const nav = [
   {
-    ...MainNAvigation.HOME,
+    ...MainNavigation.HOME,
     icon: <SharedSvg type='home' />,
   },
   {
-    ...MainNAvigation.SERVICES,
+    ...MainNavigation.SERVICES,
     icon: <SharedSvg type='services' />,
   },
   {
-    ...MainNAvigation.EDUCATION,
+    ...MainNavigation.EDUCATION,
     icon: <SharedSvg type='education' />,
   },
   {
-    ...MainNAvigation.EXPERIENCE,
+    ...MainNavigation.EXPERIENCE,
     icon: <SharedSvg type='experience' />,
   },
   {
-    ...MainNAvigation.PROJECTS,
+    ...MainNavigation.PROJECTS,
     icon: <SharedSvg type='projects' />,
   },
   {
-    ...MainNAvigation.CONTACT,
+    ...MainNavigation.CONTACT,
     icon: <SharedSvg type='contact' />,
   },
 ];

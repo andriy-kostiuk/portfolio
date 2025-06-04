@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Experience.module.scss';
 import { IExperience } from '@/types';
 import { ExperienceCard } from '../ExperienceCard';
-import { MainNAvigation } from '@/constants';
+import { MainNavigation } from '@/constants';
 
 const experience: IExperience[] = [
   {
@@ -168,7 +168,7 @@ export const Experience = () => {
   return (
     <section
       className={styles.exp}
-      id={MainNAvigation.EXPERIENCE.path.slice(2)}
+      id={MainNavigation.EXPERIENCE.path.slice(2)}
     >
       <div className='container'>
         <h2 className={classNames(styles.exp__title, 'title')}>Experience</h2>

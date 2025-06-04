@@ -4,39 +4,34 @@ import classNames from 'classnames';
 import { SharedSvg } from '@/modules/Shared/SharedSvg';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MainNAvigation } from '@/constants';
+import { MainNavigation } from '@/constants';
+import { useTranslations } from 'next-intl';
 
 interface Props {
   link?: boolean;
 }
 
 export const Hero: FC<Props> = ({ link = true }) => {
+  const t = useTranslations('hero');
+
   return (
     <section className={styles.hero}>
       <div className={classNames(styles.hero__container)}>
         <div className={classNames(styles.hero__content)}>
           <h1 className={styles.hero__title}>
-            I’m Andrii Kostiuk <span>Fullstack</span> Developer
+            {t.rich('title', {
+              span: (chunks) => <span>{chunks}</span>,
+            })}
           </h1>
 
-          <p className={styles.hero__subtitle}>
-            Full Stack Developer with 5+ years in facade system design and 1+
-            years in web development, specializing in React, Redux, TypeScript,
-            Node.js, and PostgreSQL.My engineering background sharpens my
-            ability to create scalable, high-performance applications while
-            balancing functionality and efficiency. Strong at modular
-            architecture, API integration, and real-time WebSocket
-            updates.Experienced in managing complex projects, meeting deadlines,
-            and translating technical requirements into maintainable code. Eager
-            to expand into Vue, Angular,and React Native.
-          </p>
+          <p className={styles.hero__subtitle}>{t('text')}</p>
 
           {link && (
             <Link
-              href={MainNAvigation.CONTACT.path}
+              href={MainNavigation.CONTACT.path}
               className={styles.hero__action}
             >
-              Let’s Talk
+              {t('btn')}
               <span className={styles.hero__icon}>
                 <SharedSvg type='arrow' />
               </span>

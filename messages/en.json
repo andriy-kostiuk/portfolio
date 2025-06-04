@@ -1,16 +1,107 @@
 {
-  "navigation": {
-    "home": "Home",
-    "about": "About",
-    "contact": "Contact",
-    "projects": "Projects"
+  "homePage": {
+    "services": {
+      "title": "My Services",
+      "subtitle": "I deliver scalable web solutions with a focus on performance, maintainability, and modern technologies.",
+      "services": [
+        {
+          "title": "Frontend Development",
+          "icon": "frontend",
+          "list": [
+            "Responsive and accessible UI with React and Next.js",
+            "State management using Redux Toolkit and Context API",
+            "Reusable components and modular SCSS architecture"
+          ]
+        },
+        {
+          "title": "Backend Development",
+          "icon": "backend",
+          "list": [
+            "REST API and server logic with Node.js and Express",
+            "Real-time features using WebSocket (Socket.IO)",
+            "PostgreSQL database integration with Sequelize ORM"
+          ]
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "subtitle": "My technical education and intensive self-learning through courses have equipped me with the skills to build scalable, maintainable, and efficient web applications.",
+      "groups": [
+        {
+          "title": "Courses & Certifications",
+          "values": [
+            {
+              "title": "Mate Academy",
+              "status": "Fullstack Student",
+              "date": "2024 – 2025",
+              "result": "Fullstack Web Development Course",
+              "desc": "Learned modern web development tools such as React, Node.js, PostgreSQL, and TypeScript. Built fullstack apps using best practices and code reviews.",
+              "certificateLinks": [
+                {
+                  "label": "Mate Academy Certificate",
+                  "url": "https://drive.google.com/file/d/1pJjAFfgRIN-UbCcs3woML5IM3WPc0kZG/view?usp=sharing"
+                }
+              ]
+            },
+            {
+              "title": "ITVDN / CodeWars",
+              "status": "Self-Learning",
+              "date": "2022 – 2025",
+              "result": "React, JavaScript, Algorithms",
+              "desc": "Completed multiple courses on React, JavaScript, and OOP. Solved 266+ CodeWars katas to improve algorithmic skills.",
+              "certificateLinks": [
+                {
+                  "label": "React",
+                  "url": "https://drive.google.com/file/d/1DsX5LSqlcWLMh0tMJrXm5h5ZL0jtd64g/view?usp=drive_link"
+                },
+
+                {
+                  "label": "JavaScript",
+                  "url": "https://drive.google.com/file/d/187GgrAjI-GDvDaXnAx1bEe5tIkfYosFi/view?usp=drive_link"
+                }
+              ]
+            },
+            {
+              "title": "HTML Academy",
+              "status": "Frontend Student",
+              "date": "2021 - 2022",
+              "result": "Frontend Development Course",
+              "desc": "Practiced responsive design, semantic HTML, and CSS (BEM methodology), improving my frontend development skills."
+            }
+          ]
+        },
+        {
+          "title": "Formal Education",
+          "values": [
+            {
+              "title": "Kyiv National University of Construction and Architecture",
+              "status": "Student",
+              "date": "2015 – 2019",
+              "result": "Master's Degree in Industrial and Civil Engineering",
+              "desc": "Studied engineering principles, structural analysis, and project management. These skills shaped my logical thinking and attention to detail — qualities I now apply in software development."
+            }
+          ]
+        }
+      ]
+    },
+    "experience": {
+      "title": "",
+      "subtitle": "",
+      "values": []
+    },
+    "projects": {
+      "title": "",
+      "subtitle": "",
+      "values": []
+    }
   },
-  "home": {
-    "title": "Welcome",
-    "description": "This is our multilingual website"
+  "hero": {
+    "title": "I’m Andrii Kostiuk <span>Fullstack</span> Developer",
+    "text": "Full Stack Developer with 5+ years in facade system design and 1+ years in web development, specializing in React, Redux, TypeScript, Node.js, and PostgreSQL.My engineering background sharpens my ability to create scalable, high-performance applications while balancing functionality and efficiency. Strong at modular architecture, API integration, and real-time WebSocket updates.Experienced in managing complex projects, meeting deadlines, and translating technical requirements into maintainable code. Eager to expand into Vue, Angular,and React Native.",
+    "btn": "Let’s Talk"
   },
-  "projects": {
-    "title": "Our Projects",
-    "notFound": "Project not found"
+  "footer": {
+    "text": "© 2025 Andrii Kostiuk. All Rights Reserved."
   }
 }

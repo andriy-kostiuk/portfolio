@@ -1,4 +1,4 @@
-export const MainNAvigation = {
+export const MainNavigation = {
   HOME: {
     title: 'Home',
     path: '/',
