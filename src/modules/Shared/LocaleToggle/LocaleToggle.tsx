@@ -37,7 +37,7 @@ export const LocaleToggle: FC<Props> = ({ className = '' }) => {
 
     setTimeout(() => {
       router.push(newPath);
-    }, 200);
+    }, 100);
   };
 
   return (
@@ -53,7 +53,7 @@ export const LocaleToggle: FC<Props> = ({ className = '' }) => {
           [styles['locale__icon--clicked']]: isClicked,
         })}
       >
-        <SharedSvg type={locale} />
+        <SharedSvg type={newLocale} />
       </div>
     </button>
   );

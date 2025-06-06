@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use 'sass:meta';
 
 @mixin on-tablet {
   @media (min-width: $tablet-width) {
@@ -36,7 +37,7 @@
   $timing: ease,
   $delay: 0s
 ) {
-  @if type-of($properties) == 'list' {
+  @if meta.type-of($properties) == 'list' {
     transition: join((), $properties, comma) $duration $timing $delay;
   } @else {
     transition: $properties $duration $timing $delay;
