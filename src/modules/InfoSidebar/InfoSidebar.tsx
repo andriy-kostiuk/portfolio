@@ -1,39 +1,20 @@
 import React, { FC } from 'react';
-import styles from './InfoSidebar.module.scss';
 import Image from 'next/image';
 import classNames from 'classnames';
 import { SharedSvg } from '../Shared/SharedSvg';
+import { useT } from '@/hooks';
+
+import styles from './InfoSidebar.module.scss';
 
 interface Props {
   className?: string;
 }
 
-const info = [
-  {
-    title: 'Email:',
-    value: 'andriykostiuk1@gmail.com',
-  },
-  {
-    title: 'Phone:',
-    value: '+38 068 130 9316',
-  },
-  {
-    title: 'Residence:',
-    value: 'Ukraine',
-  },
-  {
-    title: 'City:',
-    value: 'Kyiv',
-  },
-  {
-    title: 'Age:',
-    value: '29 Years',
-  },
-  {
-    title: 'English:',
-    value: 'Intermediate',
-  },
-];
+interface Info {
+  title: string;
+  value: string;
+  type?: 'email' | 'phone';
+}
 
 const socials = [
   {
@@ -84,6 +65,10 @@ const skills = [
 ];
 
 export const InfoSidebar: FC<Props> = ({ className }) => {
+  const t = useT('infoSidebar');
+
+  const info = t.raw<Info[]>('infoList');
+
   return (
     <div className={classNames(styles.info, className)}>
       <div className={styles.info__container}>
@@ -95,8 +80,8 @@ export const InfoSidebar: FC<Props> = ({ className }) => {
             height={100}
           />
         </div>
-        <p className={styles.info__name}>Andrii Kostiuk</p>
-        <p className={styles.info__position}>Fullstack Developer</p>
+        <p className={styles.info__name}>{t('name')}</p>
+        <p className={styles.info__position}>{t('position')}</p>
 
         <ul className={styles.info__socials}>
           {socials.map(({ name, icon, href }) => (
@@ -114,28 +99,29 @@ export const InfoSidebar: FC<Props> = ({ className }) => {
         </ul>
 
         <ul className={classNames(styles.info__about, styles.infoSection)}>
-          {info.map(({ title, value }) => {
+          {info.map(({ type, value, title }) => {
             const renderValue = () => {
-              if (title === 'Email:') {
-                return (
-                  <a href={`mailto:${value}`} className={styles.info__link}>
-                    {value}
-                  </a>
-                );
-              }
+              switch (type) {
+                case 'email':
+                  return (
+                    <a href={`mailto:${value}`} className={styles.info__link}>
+                      {value}
+                    </a>
+                  );
 
-              if (title === 'Phone:') {
-                return (
-                  <a
-                    href={`tel:${value.replace(/\s+/g, '')}`}
-                    className={styles.info__link}
-                  >
-                    {value}
-                  </a>
-                );
-              }
+                case 'phone':
+                  return (
+                    <a
+                      href={`tel:${value.replace(/\s+/g, '')}`}
+                      className={styles.info__link}
+                    >
+                      {value}
+                    </a>
+                  );
 
-              return value;
+                default:
+                  return value;
+              }
             };
 
             return (
@@ -147,7 +133,7 @@ export const InfoSidebar: FC<Props> = ({ className }) => {
           })}
         </ul>
 
-        <p className={styles.info__sectionTitle}>Skills</p>
+        <p className={styles.info__sectionTitle}>{t('skillsTitle')}</p>
         <ul className={classNames(styles.info__skills, styles.infoSection)}>
           {skills.map((skill) => (
             <li className={styles.info__skill} key={skill}>
@@ -161,7 +147,7 @@ export const InfoSidebar: FC<Props> = ({ className }) => {
           download
           className={styles.info__download}
         >
-          Download My CV <SharedSvg type='download' />
+          {t('btn')} <SharedSvg type='download' />
         </a>
       </div>
     </div>

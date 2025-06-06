@@ -1,13 +1,13 @@
-'use client';
-
 import React, { FC } from 'react';
-import styles from './Menu.module.scss';
 import { ThemeToggle } from '../Shared/ThemeToggle';
 import { MainNavigation } from '@/constants';
 import { SharedSvg } from '../Shared/SharedSvg';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import classNames from 'classnames';
+import { LocaleToggle } from '../Shared/LocaleToggle';
+
+import styles from './Menu.module.scss';
 
 interface Props {
   className?: string;
@@ -46,7 +46,15 @@ export const Menu: FC<Props> = ({ className }) => {
   return (
     <div className={classNames(styles.menu, className)}>
       <div className={styles.menu__container}>
-        <ThemeToggle className={styles.menu__theme} />
+        <div className={styles.menu__top}>
+          <ThemeToggle
+            className={classNames(
+              styles.menu__action,
+              styles['menu__action--theme']
+            )}
+          />
+          <LocaleToggle className={styles.menu__action} />
+        </div>
 
         <nav className={styles.menu__nav}>
           <ul className={styles.menu__navList}>
@@ -61,6 +69,7 @@ export const Menu: FC<Props> = ({ className }) => {
                     })}
                     href={item.path}
                   >
+                    <span className='visually-hidden'>{item.title}</span>
                     {item.icon}
                   </Link>
                 </li>

@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 
 import styles from './Technologies.module.scss';
 import classNames from 'classnames';
+import { useT } from '@/hooks';
 
 interface Props {
   technologies: string[];
@@ -9,9 +10,11 @@ interface Props {
 }
 
 export const Technologies: FC<Props> = ({ technologies, className = '' }) => {
+  const t = useT('projectPage');
+
   return (
     <div className={classNames(styles.features, className)}>
-      <h2 className={styles.features__title}>Technologies Used</h2>
+      <h2 className={styles.features__title}>{t('technologies')}</h2>
       <ul className={styles.features__list}>
         {technologies.map((feature) => (
           <li key={feature} className={styles.features__item}>

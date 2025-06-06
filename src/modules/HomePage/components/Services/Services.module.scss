@@ -26,6 +26,8 @@
     background: var(--card-bg);
     border-radius: 12px;
     padding: 24px;
+    display: flex;
+    flex-direction: column;
   }
 
   &__cardIcon {
@@ -61,7 +63,9 @@
   &__cardList {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
+    flex-grow: 1;
   }
 
   &__cardItem {
@@ -78,6 +82,7 @@
       display: inline-block;
       width: 24px;
       height: 24px;
+      flex-shrink: 0;
 
       mask-image: url('/img/icons/arrow.svg');
       -webkit-mask-image: url('/img/icons/arrow.svg');

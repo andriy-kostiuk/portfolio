@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import styles from './ExperienceCard.module.scss';
 import { IExperience } from '@/types';
+import { SharedSvg } from '@/modules/Shared/SharedSvg';
 
 interface Props {
   exp: IExperience;
@@ -14,7 +15,7 @@ export const ExperienceCard: FC<Props> = ({ exp }) => {
       <div className={styles.card__left}>
         <div className={styles.card__wrapper}>
           <div className={styles.card__status}>
-            <div className={styles.card__icon}>{icon}</div>
+            <div className={styles.card__icon}>{<SharedSvg type={icon} />}</div>
 
             <p className={styles.card__company}>{company}</p>
           </div>

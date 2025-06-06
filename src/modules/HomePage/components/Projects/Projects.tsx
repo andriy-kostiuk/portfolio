@@ -1,29 +1,31 @@
-'use client';
-
 import classNames from 'classnames';
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectCreative } from 'swiper/modules';
 import { MainNavigation } from '@/constants';
-
-import styles from './Projects.module.scss';
 import { SharedSvg } from '@/modules/Shared/SharedSvg';
 import { ProjectsSlide } from '../ProjectsSlide';
-import { projects } from '@/data/projects';
-import { ProjectPreview } from '@/types';
+import { Project, ProjectPreview } from '@/types';
+import { useT } from '@/hooks';
 
-const projectsPreview: ProjectPreview[] = projects.map(
-  ({ id, title, descShort, images, demo, gitHub }) => ({
-    id,
-    title,
-    desc: descShort,
-    preview: images[0],
-    demo,
-    gitHub,
-  })
-);
+import styles from './Projects.module.scss';
 
 export const Projects = () => {
+  const t = useT('homePage.projects');
+
+  const projects = useT('').raw<Project[]>('projects');
+
+  const projectsPreview: ProjectPreview[] = projects.map(
+    ({ id, title, descShort, images, demo, gitHub }) => ({
+      id,
+      title,
+      desc: descShort,
+      preview: images[0],
+      demo,
+      gitHub,
+    })
+  );
+
   return (
     <section
       className={styles.projects}
@@ -31,12 +33,10 @@ export const Projects = () => {
     >
       <div className='container'>
         <h2 className={classNames(styles.projects__title, 'title')}>
-          Projects
+          {t('title')}
         </h2>
         <p className={classNames(styles.projects__subtitle, 'subtitle')}>
-          A selection of projects I’ve built using modern technologies like
-          React, TypeScript, Node.js, WebSockets, and PostgreSQL. Each one
-          reflects my focus on clean code, functionality, and responsive design.
+          {t('subtitle')}
         </p>
 
         <Swiper
@@ -62,13 +62,11 @@ export const Projects = () => {
           modules={[EffectCreative, Pagination, Navigation]}
           className={styles.projects__swiper}
         >
-          {projectsPreview.map((project) => {
-            return (
-              <SwiperSlide key={project.id} className={styles.projects__slide}>
-                <ProjectsSlide {...project} />
-              </SwiperSlide>
-            );
-          })}
+          {projectsPreview.map((project) => (
+            <SwiperSlide key={project.id} className={styles.projects__slide}>
+              <ProjectsSlide {...project} />
+            </SwiperSlide>
+          ))}
 
           <button
             className={classNames(
@@ -76,6 +74,7 @@ export const Projects = () => {
               'projects__swiper-prev'
             )}
             aria-label='Previous slide'
+            role='button'
           >
             <SharedSvg type='arrow-fill' />
           </button>
@@ -86,6 +85,7 @@ export const Projects = () => {
               'projects__swiper-next'
             )}
             aria-label='Next slide'
+            role='button'
           >
             <SharedSvg type='arrow-fill' />
           </button>

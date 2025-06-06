@@ -1,20 +1,21 @@
 import React from 'react';
-import styles from './Education.module.scss';
 import classNames from 'classnames';
 import { IEducation } from '@/types';
 import { EducationCard } from '../EducationCard';
 import { MainNavigation } from '@/constants';
-import { useTranslations } from 'next-intl';
+import { useT } from '@/hooks';
 
-interface Group {
+import styles from './Education.module.scss';
+
+interface EducationItem {
   title: string;
   values: IEducation[];
 }
 
 export const Education = () => {
-  const t = useTranslations('homePage.education');
+  const t = useT('homePage.education');
 
-  const educationGroups = t.raw('groups') as Group[];
+  const educationList = t.raw<EducationItem[]>('list');
 
   return (
     <section
@@ -29,18 +30,20 @@ export const Education = () => {
           {t('subtitle')}
         </p>
 
-        {educationGroups.map(({ title, values }) => {
-          return (
-            <React.Fragment key={title}>
-              <h3 className={styles.education__groupTitle}>{title}</h3>
-              <ul className={styles.education__list}>
-                {values.map((item) => (
-                  <EducationCard key={item.title} item={item} />
-                ))}
-              </ul>
-            </React.Fragment>
-          );
-        })}
+        <ul className={styles.education__groups}>
+          {educationList.map(({ title, values }) => {
+            return (
+              <li key={title}>
+                <h3 className={styles.education__groupTitle}>{title}</h3>
+                <ul className={styles.education__list}>
+                  {values.map((item) => (
+                    <EducationCard key={item.title} item={item} />
+                  ))}
+                </ul>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );

@@ -2,11 +2,23 @@
   text-align: center;
 
   &__title {
-    margin-bottom: 16px;
+    margin: 0;
+    margin-bottom: 1rem;
   }
 
   &__subtitle {
     margin-bottom: 40px;
+  }
+
+  &__groups {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__groupTitle {
+    margin: 0;
+    margin-bottom: 1rem;
   }
 
   &__list {

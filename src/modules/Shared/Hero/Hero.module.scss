@@ -71,6 +71,7 @@
     border: none;
     background: $primary;
     margin: 0 auto;
+    color: $black;
 
     @include text-base-medium;
     @include transition;

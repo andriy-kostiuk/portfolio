@@ -1,61 +1,60 @@
 {
   "homePage": {
     "services": {
-      "title": "My Services",
-      "subtitle": "I deliver scalable web solutions with a focus on performance, maintainability, and modern technologies.",
-      "services": [
+      "title": "Мої послуги",
+      "subtitle": "Я створюю масштабовані веб-рішення з акцентом на продуктивність, підтримуваність і сучасні технології.",
+      "list": [
         {
-          "title": "Frontend Development",
+          "title": "Frontend-розробка",
           "icon": "frontend",
           "list": [
-            "Responsive and accessible UI with React and Next.js",
-            "State management using Redux Toolkit and Context API",
-            "Reusable components and modular SCSS architecture"
+            "Проєктування та розробка сучасних адаптивних інтерфейсів за допомогою React і TypeScript",
+            "Реалізація чистої архітектури з багаторазовими компонентами та масштабованими стилями (SCSS, BEM, Tailwind)",
+            "Оптимізація продуктивності та доступності на різних пристроях і в браузерах"
           ]
         },
         {
-          "title": "Backend Development",
+          "title": "Backend-розробка",
           "icon": "backend",
           "list": [
-            "REST API and server logic with Node.js and Express",
-            "Real-time features using WebSocket (Socket.IO)",
-            "PostgreSQL database integration with Sequelize ORM"
+            "Розробка надійних серверних застосунків з використанням Node.js та Express",
+            "Створення та інтеграція REST API і підтримка зв’язку в реальному часі через WebSocket",
+            "Керування реляційними базами даних з використанням PostgreSQL і Sequelize ORM"
           ]
         }
       ]
     },
     "education": {
-      "title": "Education",
-      "subtitle": "My technical education and intensive self-learning through courses have equipped me with the skills to build scalable, maintainable, and efficient web applications.",
-      "groups": [
+      "title": "Освіта",
+      "subtitle": "Технічна освіта та інтенсивне самонавчання через курси надали мені навички для створення масштабованих, підтримуваних і ефективних веб-додатків.",
+      "list": [
         {
-          "title": "Courses & Certifications",
+          "title": "Курси та сертифікації",
           "values": [
             {
               "title": "Mate Academy",
-              "status": "Fullstack Student",
+              "status": "Fullstack-студент",
               "date": "2024 – 2025",
-              "result": "Fullstack Web Development Course",
-              "desc": "Learned modern web development tools such as React, Node.js, PostgreSQL, and TypeScript. Built fullstack apps using best practices and code reviews.",
+              "result": "Курс з повного стеку веб-розробки",
+              "desc": "Опанував сучасні інструменти веб-розробки: React, Node.js, PostgreSQL, TypeScript. Створював повностекові застосунки з дотриманням найкращих практик і проходженням code review.",
               "certificateLinks": [
                 {
-                  "label": "Mate Academy Certificate",
+                  "label": "Сертифікат Mate Academy",
                   "url": "https://drive.google.com/file/d/1pJjAFfgRIN-UbCcs3woML5IM3WPc0kZG/view?usp=sharing"
                 }
               ]
             },
             {
               "title": "ITVDN / CodeWars",
-              "status": "Self-Learning",
+              "status": "Самонавчання",
               "date": "2022 – 2025",
-              "result": "React, JavaScript, Algorithms",
-              "desc": "Completed multiple courses on React, JavaScript, and OOP. Solved 266+ CodeWars katas to improve algorithmic skills.",
+              "result": "React, JavaScript, Алгоритми",
+              "desc": "Пройдено кілька курсів з React, JavaScript та ООП. Розв'язано 266+ задач на CodeWars для покращення алгоритмічного мислення.",
               "certificateLinks": [
                 {
                   "label": "React",
                   "url": "https://drive.google.com/file/d/1DsX5LSqlcWLMh0tMJrXm5h5ZL0jtd64g/view?usp=drive_link"
                 },
-
                 {
                   "label": "JavaScript",
                   "url": "https://drive.google.com/file/d/187GgrAjI-GDvDaXnAx1bEe5tIkfYosFi/view?usp=drive_link"
@@ -64,44 +63,462 @@
             },
             {
               "title": "HTML Academy",
-              "status": "Frontend Student",
-              "date": "2021 - 2022",
-              "result": "Frontend Development Course",
-              "desc": "Practiced responsive design, semantic HTML, and CSS (BEM methodology), improving my frontend development skills."
+              "status": "Frontend-студент",
+              "date": "2021 – 2022",
+              "result": "Курс фронтенд-розробки",
+              "desc": "Практикував адаптивну верстку, семантичний HTML і CSS (методологія BEM), покращуючи навички у фронтенд-розробці."
             }
           ]
         },
         {
-          "title": "Formal Education",
+          "title": "Формальна освіта",
           "values": [
             {
-              "title": "Kyiv National University of Construction and Architecture",
-              "status": "Student",
+              "title": "Київський національний університет будівництва та архітектури",
+              "status": "Студент",
               "date": "2015 – 2019",
-              "result": "Master's Degree in Industrial and Civil Engineering",
-              "desc": "Studied engineering principles, structural analysis, and project management. These skills shaped my logical thinking and attention to detail — qualities I now apply in software development."
+              "result": "Магістр з промислового та цивільного будівництва",
+              "desc": "Вивчав принципи інженерії, розрахунок конструкцій та управління проєктами. Ці навички сформували логічне мислення та уважність до деталей — якості, які я тепер застосовую у розробці ПЗ."
             }
           ]
         }
       ]
     },
     "experience": {
-      "title": "",
-      "subtitle": "",
-      "values": []
+      "title": "Досвід",
+      "subtitle": "Мій досвід охоплює fullstack-розробку реальних проєктів та попередній інженерний бекграунд. Я зосереджуюсь на створенні масштабованих, підтримуваних і зручних у використанні застосунків із використанням сучасних технологій.",
+      "list": [
+        {
+          "company": "Pixoram",
+          "position": "Frontend-розробник",
+          "duration": "Березень 2025 – Травень 2025",
+          "technologies": [
+            "JavaScript",
+            "React",
+            "Typescript",
+            "HTML",
+            "CSS",
+            "SCSS",
+            "BEM",
+            "Redux Toolkit",
+            "GIT",
+            "WP"
+          ],
+          "icon": "pixoram",
+          "list": [
+            "Розробив понад 40 сучасних лендингів і промо-сайтів з використанням React і TypeScript, забезпечуючи оптимальну швидкість завантаження на різних пристроях.",
+            "Активно співпрацював із розробниками та дизайнерами, швидко опрацьовуючи фідбек і впроваджуючи покращення, що прискорило розробку нових функцій на 30%.",
+            "Оптимізував продуктивність понад 20 сторінок, зменшивши час завантаження на 40%. Це підвищило показник Google PageSpeed Insights з 70 до 95 та знизило показник відмов на 20%.",
+            "Забезпечив коректне відображення сторінок на мобільних пристроях, планшетах і десктопах, що збільшило конверсію на 10%."
+          ]
+        },
+        {
+          "company": "Freelance",
+          "position": "Fullstack-розробник",
+          "duration": "Лютий 2024 – Лютий 2025",
+          "technologies": [
+            "JavaScript",
+            "React",
+            "Typescript",
+            "HTML",
+            "CSS",
+            "SCSS",
+            "BEM",
+            "Redux Toolkit",
+            "GIT",
+            "Node.js",
+            "Express",
+            "PostgreSQL"
+          ],
+          "icon": "freelance",
+          "list": [
+            "Розробляв веб-застосунки з використанням React, TypeScript, HTML та CSS, дотримуючись принципів адаптивного дизайну та забезпечуючи кросбраузерну сумісність.",
+            "Керував станом застосунків за допомогою Redux Toolkit та useContext, що дало змогу ефективно працювати зі складною логікою.",
+            "Використовував Git для контролю змін і організації процесу розробки.",
+            "Регулярно вирішував алгоритмічні задачі для покращення навичок вирішення проблем."
+          ]
+        },
+        {
+          "company": "MaxiBud",
+          "position": "Інженер-будівельник",
+          "duration": "Вересень 2023 – Жовтень 2024",
+          "icon": "maxibud",
+          "list": [
+            "Вів одночасно 3 будівельні об’єкти, ефективно розподіляючи час і ресурси для дотримання термінів.",
+            "Розробив і погодив 7 проєктів житлових і комерційних будівель протягом року.",
+            "Повністю реалізував 4 власні проєкти, дотримуючись технічних вимог.",
+            "Співпрацював з архітекторами та будівельними бригадами для узгодження проєктів та своєчасної реалізації.",
+            "Вів фасадні проєкти від технічного завдання до повного впровадження."
+          ]
+        }
+      ]
     },
     "projects": {
-      "title": "",
-      "subtitle": "",
-      "values": []
+      "title": "Проєкти",
+      "subtitle": "Добірка проєктів, які я створив із використанням сучасних технологій: React, TypeScript, Node.js, WebSockets і PostgreSQL. У кожному з них я зосереджувався на чистому коді, функціональності та адаптивному дизайні."
     }
   },
+  "contactPage": {
+    "title": "Контакти",
+    "form": {
+      "title": "Зв’яжіться зі мною",
+      "subtitle": "Якщо у вас є ідея проєкту, вакансія або просто бажання поспілкуватися — сміливо залишайте повідомлення. Я відповім якнайшвидше.",
+      "successMessage": "Дякую! Я незабаром з вами зв’яжусь.",
+      "errorMessage": "Вибачте, щось пішло не так. Спробуйте пізніше або оберіть інший спосіб зв’язку зі мною.",
+      "errors": {
+        "nameRequired": "Ім’я є обов’язковим",
+        "emailRequired": "Електронна пошта є обов’язковою",
+        "emailInvalid": "Неправильна електронна адреса",
+        "subjectRequired": "Тема є обов’язковою",
+        "messageRequired": "Повідомлення є обов’язковим"
+      },
+      "formElements": {
+        "nameInput": {
+          "label": "Ім’я",
+          "placeholder": "Ваше ім’я"
+        },
+        "emailInput": {
+          "label": "Електронна пошта",
+          "placeholder": "john@doe.com"
+        },
+        "subjectInput": {
+          "label": "Тема",
+          "placeholder": "Чим я можу допомогти?"
+        },
+        "messageInput": {
+          "label": "Повідомлення",
+          "placeholder": "Напишіть своє повідомлення тут..."
+        },
+        "btn": "Надіслати повідомлення"
+      }
+    }
+  },
+  "projectPage": {
+    "demo": "Демо",
+    "goal": "Мета",
+    "solution": "Рішення",
+    "features": "Ключові можливості",
+    "technologies": "Використані технології"
+  },
   "hero": {
-    "title": "I’m Andrii Kostiuk <span>Fullstack</span> Developer",
-    "text": "Full Stack Developer with 5+ years in facade system design and 1+ years in web development, specializing in React, Redux, TypeScript, Node.js, and PostgreSQL.My engineering background sharpens my ability to create scalable, high-performance applications while balancing functionality and efficiency. Strong at modular architecture, API integration, and real-time WebSocket updates.Experienced in managing complex projects, meeting deadlines, and translating technical requirements into maintainable code. Eager to expand into Vue, Angular,and React Native.",
-    "btn": "Let’s Talk"
+    "title": "Я Андрій Костюк — <span>Fullstack</span> розробник",
+    "text": "Fullstack-розробник з 5+ роками досвіду в проєктуванні фасадних систем і 1+ роком у веброзробці. Спеціалізуюсь на React, Redux, TypeScript, Node.js та PostgreSQL. Інженерна освіта допомагає мені створювати масштабовані та високопродуктивні застосунки з балансом між функціональністю та ефективністю. Володію модульною архітектурою, інтеграцією API та реальним часом через WebSocket. Маю досвід керування складними проєктами, дотримання дедлайнів і перетворення технічних вимог у підтримуваний код. Хочу розвиватися у Vue, Angular та React Native.",
+    "btn": "Напишіть мені"
   },
   "footer": {
-    "text": "© 2025 Andrii Kostiuk. All Rights Reserved."
-  }
+    "text": "© 2025 Андрій Костюк. Усі права захищено."
+  },
+  "infoSidebar": {
+    "name": "Андрій Костюк",
+    "position": "Fullstack розробник",
+    "infoList": [
+      {
+        "title": "Пошта:",
+        "value": "andriykostiuk1@gmail.com",
+        "type": "email"
+      },
+      {
+        "title": "Телефон:",
+        "value": "+38 068 130 9316",
+        "type": "phone"
+      },
+      {
+        "title": "Країна:",
+        "value": "Україна"
+      },
+      {
+        "title": "Місто:",
+        "value": "Київ"
+      },
+      {
+        "title": "Вік:",
+        "value": "29 років"
+      },
+      {
+        "title": "Англійська:",
+        "value": "Середній рівень"
+      }
+    ],
+    "skillsTitle": "Навички",
+    "btn": "Завантажити CV"
+  },
+  "projects": [
+    {
+      "id": "portfolio",
+      "title": "Андрій Костюк - Портфоліо",
+      "subtitle": "Особисте портфоліо створене з Next.js",
+      "images": [
+        "/img/projects/portfolio/portfolio-1.webp",
+        "/img/projects/portfolio/portfolio-2.webp",
+        "/img/projects/portfolio/portfolio-3.webp",
+        "/img/projects/portfolio/portfolio-4.webp",
+        "/img/projects/portfolio/portfolio-5.webp",
+        "/img/projects/portfolio/portfolio-6.webp"
+      ],
+      "demo": "https://portfolio-azure-theta-56.vercel.app/",
+      "gitHub": "https://github.com/andriy-kostiuk/portfolio",
+      "descShort": "Особистий веб-сайт портфоліо створений з Next.js App Router, що має повністю адаптивний дизайн, анімований інтерфейс та модульну архітектуру з використанням TypeScript та SCSS модулів.",
+      "desc": [
+        "Особистий веб-сайт портфоліо створений з Next.js, який демонструє професійні навички, проекти та досвід.",
+        "Має чистий, адаптивний дизайн, оптимізований для продуктивності та SEO.",
+        "Включає контактну форму з можливістю відправки електронної пошти через NodeMailer."
+      ],
+      "features": [
+        "Фреймворк Next.js: Серверний рендеринг та генерація статичних сайтів для SEO та продуктивності.",
+        "Адаптивний дизайн: Макет mobile-first, оптимізований для телефонів, планшетів та комп'ютерів.",
+        "Демонстрація проектів: Детальні приклади навичок та завершених проектів.",
+        "Темна/Світла тема: Перемикання теми за вибором користувача.",
+        "Контактна форма: Відправка повідомлень безпосередньо з сайту через інтегрований сервіс електронної пошти NodeMailer.",
+        "Оптимізована продуктивність: Швидкий час завантаження та плавні переходи інтерфейсу.",
+        "Підтримка локалізації: Багатомовний інтерфейс з перекладом українською та англійською мовами."
+      ],
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "NodeMailer",
+        "Mobile First",
+        "Swiper",
+        "BEM",
+        "Responsive Design",
+        "CSS modules (SCSS)",
+        "React-hook-form",
+        "Next-intl"
+      ],
+      "goal": "Створити професійний, SEO-дружний особистий сайт портфоліо з простою у використанні контактною формою, що підтримує сповіщення електронною поштою.",
+      "solution": "Розроблено з Next.js та React, інтегровано NodeMailer на серверних API маршрутах для безпечної відправки електронної пошти, реалізовано адаптивний дизайн та перемикання тем для покращення користувацького досвіду."
+    },
+    {
+      "id": "timeless-met",
+      "title": "Timeless MET",
+      "subtitle": "Сучасна лендінг-сторінка музею",
+      "images": [
+        "/img/projects/timeless-met/timeless-met-1.webp",
+        "/img/projects/timeless-met/timeless-met-2.webp",
+        "/img/projects/timeless-met/timeless-met-3.webp",
+        "/img/projects/timeless-met/timeless-met-4.webp",
+        "/img/projects/timeless-met/timeless-met-5.webp"
+      ],
+      "demo": "https://andriy-kostiuk.github.io/timeless_met/",
+      "gitHub": "https://github.com/andriy-kostiuk/timeless_met",
+      "descShort": "Адаптивна та сучасна лендінг-сторінка для музею MET, створена з HTML5 та SCSS. Чиста, семантична структура та повністю адаптивний макет.",
+      "desc": [
+        "Адаптивна та сучасна лендінг-сторінка для музею MET, що використовує HTML5, SCSS та методологію BEM для чистої та зручної для підтримки структури коду.",
+        "Реалізована з акцентом на адаптивний дизайн для забезпечення оптимального досвіду перегляду на всіх пристроях, від настільних комп'ютерів до мобільних телефонів."
+      ],
+      "features": [
+        "Адаптивний дизайн: Повністю адаптивний макет для всіх розмірів екранів від мобільних до настільних.",
+        "Методологія BEM: CSS організований відповідно до принципів Блок-Елемент-Модифікатор для покращеної підтримуваності.",
+        "CSS анімації: Тонкі анімації покращують користувацький досвід без впливу на продуктивність.",
+        "Плавна прокрутка: Реалізована для кращого досвіду навігації по сторінці.",
+        "Власна система сітки: Ручно написані CSS grid макети для гнучкої організації контенту.",
+        "Бургер-меню: Мобільна навігація з анімованим перемикачем гамбургер-меню.",
+        "Кросбраузерна сумісність: Протестовано та оптимізовано для основних браузерів.",
+        "Семантичний HTML5: Правильно структурована розмітка для покращення доступності та SEO."
+      ],
+      "technologies": ["HTML5", "SCSS", "Методологія BEM", "Mobile-first"],
+      "goal": "Створення адаптивного веб-сайту, який передає елегантну естетику музею MET, забезпечуючи відмінну продуктивність на всіх пристроях.",
+      "solution": "Реалізовано методологію BEM для підтримуваної архітектури SCSS модулів та використано сучасні CSS техніки як Grid та Flexbox для створення адаптивного макету без сильної залежності від JavaScript."
+    },
+    {
+      "id": "power-tiles",
+      "title": "PowerTiles",
+      "subtitle": "Гра 2048",
+      "images": [
+        "/img/projects/power-tiles/power-tiles-1.webp",
+        "/img/projects/power-tiles/power-tiles-2.webp",
+        "/img/projects/power-tiles/power-tiles-3.webp",
+        "/img/projects/power-tiles/power-tiles-4.webp",
+        "/img/projects/power-tiles/power-tiles-5.webp"
+      ],
+      "demo": "https://andriy-kostiuk.github.io/power-tiles/",
+      "gitHub": "https://github.com/andriy-kostiuk/power-tiles",
+      "descShort": "Класична гра-головоломка 2048, створена з JavaScript, HTML та SCSS. Підтримує рух плиток, злиття, підрахунок очок та плавні анімації.",
+      "desc": [
+        "PowerTiles - це браузерна реалізація гри-головоломки 2048, де гравці переміщують пронумеровані плитки по сітці, щоб об'єднати їх та досягти плитки 2048.",
+        "Створена з використанням чистого JavaScript, HTML5 та CSS/SCSS для забезпечення плавного геймплею та адаптивного макету без зовнішніх бібліотек.",
+        "Гра підтримує злиття плиток, відстеження очок та функцію перезапуску, а також інтуїтивне керування з клавіатури."
+      ],
+      "features": [
+        "Рух плиток: Підтримує ковзання плиток у чотирьох напрямках — вгору, вниз, вліво та вправо.",
+        "Логіка злиття: Однакові плитки об'єднуються в одну, збільшуючи рахунок гравця.",
+        "Генерація нових плиток: Автоматично додає нові плитки у випадкові порожні комірки після кожного ходу.",
+        "Перезапуск гри: Надає кнопку перезапуску для скидання стану гри.",
+        "Відображення очок: Відстежує та відображає поточний рахунок та найкращий результат.",
+        "Адаптивний дизайн: Оптимізований як для настільної, так і для мобільної гри.",
+        "Керування з клавіатури: Клавіші стрілок використовуються для інтуїтивного та швидкого геймплею."
+      ],
+      "technologies": [
+        "HTML5",
+        "SCSS",
+        "Чистий JavaScript",
+        "Адаптивний дизайн",
+        "ES6+ синтаксис"
+      ],
+      "goal": "Відтворити популярну гру-головоломку 2048 у чистому та адаптивному форматі, використовуючи лише нативні веб-технології.",
+      "solution": "Використано модульний ES6 JavaScript зі строгим режимом та архітектурою на основі класів для управління логікою гри. Реалізовано відстеження очок, логіку злиття та адаптивний дизайн без зовнішніх залежностей."
+    },
+    {
+      "id": "task-flow",
+      "title": "TaskFlow",
+      "subtitle": "Todo-додаток на базі Redux",
+      "images": [
+        "/img/projects/task-flow/task-flow-1.webp",
+        "/img/projects/task-flow/task-flow-2.webp",
+        "/img/projects/task-flow/task-flow-3.webp",
+        "/img/projects/task-flow/task-flow-4.webp",
+        "/img/projects/task-flow/task-flow-5.webp"
+      ],
+      "demo": "https://andriy-kostiuk.github.io/task-flow/",
+      "gitHub": "https://github.com/andriy-kostiuk/task-flow",
+      "descShort": "ToDo-додаток створений з React та TypeScript. Використовує Redux Toolkit для управління станом та надає фільтрацію, редагування та групування завдань.",
+      "desc": [
+        "Проект на React та TypeScript, створений з використанням Redux Toolkit для управління простим Todo-додатком з чистими практиками коду та структурованим управлінням станом.",
+        "Додаток демонструє сучасні патерни розробки React з акцентом на багаторазово використовувані компоненти, типобезпеку та ефективне управління станом.",
+        "Включає серверну інтеграцію для збереження операцій з даними та комплексну обробку помилок для надійного користувацького досвіду."
+      ],
+      "features": [
+        "CRUD операції: Додавання, оновлення та видалення завдань з адаптивним та динамічним інтерфейсом.",
+        "Фільтрація завдань: Перегляд всіх, активних або завершених завдань з плавними переходами фільтрації.",
+        "Масові дії: Позначення всіх завдань як завершених одним кліком для ефективності.",
+        "Збереження стану: Інтегровані серверні операції для створення, оновлення та видалення завдань.",
+        "Обробка помилок: Зручні для користувача сповіщення про серверні помилки під час CRUD операцій.",
+        "Гарячі клавіші: Швидкі взаємодії з використанням Enter для збереження або Escape для скасування редагування.",
+        "Плавні анімації: Реалізація CSSTransitionGroup для додавання/видалення завдань.",
+        "Типобезпека: Повна інтеграція TypeScript для кращої підтримуваності коду."
+      ],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Redux Toolkit",
+        "SCSS модулі",
+        "Сучасний JavaScript (ES6+)"
+      ],
+      "goal": "Створити повнофункціональний Todo-додаток, який демонструє сучасні практики розробки React, ефективне управління станом з Redux Toolkit та чисту, підтримувану архітектуру коду.",
+      "solution": "Реалізовано Redux Toolkit для спрощеного управління станом, використано TypeScript для типобезпеки та створено багаторазово використовувані компоненти з ізольованою логікою. Застосовано SCSS модулі для модульного стилізування та інтегровано плавні анімації для покращеного користувацького досвіду."
+    },
+    {
+      "id": "tech-shop",
+      "title": "TechShop",
+      "subtitle": "Повнофункціональний додаток електронної комерції",
+      "images": [
+        "/img/projects/tech-shop/tech-shop-1.webp",
+        "/img/projects/tech-shop/tech-shop-2.webp",
+        "/img/projects/tech-shop/tech-shop-3.webp",
+        "/img/projects/tech-shop/tech-shop-4.webp",
+        "/img/projects/tech-shop/tech-shop-5.webp",
+        "/img/projects/tech-shop/tech-shop-6.webp",
+        "/img/projects/tech-shop/tech-shop-7.webp",
+        "/img/projects/tech-shop/tech-shop-8.webp"
+      ],
+      "demo": "https://andriy-kostiuk.github.io/tech-shop/",
+      "gitHub": "https://github.com/andriy-kostiuk/tech-shop",
+      "descShort": "Додаток електронної комерції створений з React, TypeScript, Redux Toolkit та localStorage. Включає каталог товарів, кошик, обране та адаптивний дизайн.",
+      "desc": [
+        "TechShop - це повнофункціональний додаток електронної комерції, створений з React та TypeScript, що надає користувачам плавний досвід покупок з адаптивним інтерфейсом.",
+        "Проект демонструє сучасну фронтенд архітектуру з використанням багаторазово використовуваних компонентів, хуків та модульного SCSS стилізування, дотримуючись найкращих практик для підтримуваності та якості коду.",
+        "Включає перегляд товарів, пошук, сортування, функціональність кошика, обране та налаштовуваний перемикач тем, що робить його комплексною демонстрацією можливостей електронної комерції."
+      ],
+      "features": [
+        "Каталог товарів: Перегляд товарів за категоріями (Телефони, Планшети, Аксесуари) з динамічним рендерингом.",
+        "Сторінка деталей товару: Детальний перегляд зі специфікаціями, доступними кольорами та ємностями, та супутніми товарами.",
+        "Кошик для покупок: Додавання, видалення та оновлення кількості товарів зі збереженням стану в localStorage.",
+        "Обране: Позначення товарів як обраних та управління ними на окремій сторінці.",
+        "Функціональність пошуку: Фільтрація товарів за назвою з збереженням запиту в URL.",
+        "Сортування та пагінація: Сортування товарів за Новинками, Алфавітом або Найдешевшими з підтримкою пагінації.",
+        "Адаптивний макет: Повністю адаптивний інтерфейс створений з Flexbox, Grid та медіа-запитами.",
+        "Липкий заголовок: Включає навігацію, логотип, кошик, обране.",
+        "Перемикання кольорової теми: Перемикання між різними темами інтерфейсу для персоналізованого вигляду.",
+        "Сторінка 404: Елегантне резервне рішення з опцією навігації для невідомих маршрутів."
+      ],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "CSS модулі (SCSS)",
+        "React хуки",
+        "LocalStorage",
+        "Адаптивний дизайн"
+      ],
+      "goal": "Створити професійну адаптивну платформу електронної комерції, яка охоплює основну функціональність покупок та демонструє сильне розуміння React, TypeScript та фронтенд архітектури.",
+      "solution": "Створено модульний додаток електронної комерції з використанням React та TypeScript, використовуючи багаторазово використовувані компоненти, React Context та власні хуки. Інтегровано функції як фільтрація, сортування, збереження кошика/обраного через localStorage та адаптивний макет з область дії SCSS модулями."
+    },
+    {
+      "id": "hello-weather",
+      "title": "Hello Weather",
+      "subtitle": "React погодний додаток з перемиканням тем",
+      "images": [
+        "/img/projects/hello-weather/hello-weather-1.webp",
+        "/img/projects/hello-weather/hello-weather-2.webp",
+        "/img/projects/hello-weather/hello-weather-3.webp",
+        "/img/projects/hello-weather/hello-weather-4.webp",
+        "/img/projects/hello-weather/hello-weather-5.webp",
+        "/img/projects/hello-weather/hello-weather-6.webp"
+      ],
+      "demo": "https://hello-weather-a-kostiuk.vercel.app/",
+      "gitHub": "https://github.com/andriy-kostiuk/hello-weather",
+      "descShort": "Це стильний погодний додаток створений з React, який надає інформацію про погоду в реальному часі та прогнози з використанням OpenWeather API.",
+      "desc": [
+        "Hello Weather - це погодний додаток створений з React та TypeScript, що має чисту архітектуру та адаптивний дизайн.",
+        "Додаток надає інформацію про погоду в реальному часі для українських міст, використовуючи OpenWeather API.",
+        "Підтримує світлу та темну теми та оптимізований для всіх типів пристроїв з використанням Styled Components."
+      ],
+      "features": [
+        "Українські міста: Пошук та перегляд погодних даних для міст України.",
+        "Поточні дані про погоду: Включає температуру, вологість, швидкість вітру та тиск.",
+        "Світла/Темна тема: Перемикання між світлими та темними темами інтерфейсу.",
+        "Адаптивний макет: Адаптивний дизайн для настільних комп'ютерів, планшетів та мобільних пристроїв.",
+        "Типобезпека: Повністю написано на TypeScript для кращої надійності та підтримуваності.",
+        "Інтеграція API: Отримує дані про погоду в реальному часі з OpenWeather API."
+      ],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Styled Components",
+        "OpenWeather API",
+        "Адаптивний дизайн",
+        "Mobile First",
+        "BEM"
+      ],
+      "goal": "Створити легкий погодний додаток для українських користувачів з сучасними технологіями, адаптивним макетом та налаштовуваними темами.",
+      "solution": "Розроблено додаток React + TypeScript зі Styled Components. Інтегровано OpenWeather API для надання даних про погоду в реальному часі та реалізовано перемикання тем з повністю адаптивним макетом."
+    },
+    {
+      "id": "book-finder",
+      "title": "BookFinder",
+      "subtitle": "Додаток для пошуку книг з Google Books API",
+      "images": [
+        "/img/projects/book-finder/book-finder-1.webp",
+        "/img/projects/book-finder/book-finder-2.webp",
+        "/img/projects/book-finder/book-finder-3.webp",
+        "/img/projects/book-finder/book-finder-4.webp",
+        "/img/projects/book-finder/book-finder-5.webp"
+      ],
+      "demo": "https://book-finder-lime.vercel.app/",
+      "gitHub": "https://github.com/andriy-kostiuk/book-finder",
+      "descShort": "Це додаток Next.js, який дозволяє користувачам шукати та досліджувати книги через Google Books API. Проект має адаптивний дизайн з детальним відображенням інформації про книги, демонструючи розвинені навички фронтенд розробки та ефективну інтеграцію API.",
+      "desc": [
+        "Book Finder - це сучасний додаток для пошуку книг створений з Next.js та TypeScript.",
+        "Дозволяє користувачам шукати в базі даних Google Books та переглядати детальну інформацію про книги.",
+        "Додаток має серверний рендеринг для продуктивності та SEO переваг, а також адаптивний, чистий інтерфейс для всіх пристроїв."
+      ],
+      "features": [
+        "Швидкий пошук книг: Пошук через Google Books API з миттєвими результатами.",
+        "Деталі книги: Перегляд назви, автора, дати публікації, опису та іншого.",
+        "Адаптивний дизайн: Безперебійно працює на настільних комп'ютерах, планшетах та смартфонах.",
+        "Серверний рендеринг: Використовує Next.js SSR для швидшого завантаження та SEO оптимізації.",
+        "Сучасний інтерфейс: Чистий макет зосереджений на зручності використання та доступності."
+      ],
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Google Books API",
+        "Styled Components",
+        "Адаптивний дизайн",
+        "BEM"
+      ],
+      "goal": "Створити адаптивний та SEO-оптимізований додаток для пошуку книг з використанням сучасних фронтенд інструментів та інтеграції зовнішнього API.",
+      "solution": "Створено з Next.js та TypeScript, додаток інтегрує Google Books API для надання швидких, детальних результатів пошуку книг з чистим користувацьким інтерфейсом та повною адаптивністю."
+    }
+  ]
 }

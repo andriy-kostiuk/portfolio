@@ -1,15 +1,14 @@
-'use client';
-
-import { zodResolver } from '@hookform/resolvers/zod';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
+import classNames from 'classnames';
 import { contactSchema } from '@/modules/ContactPage/zodSchema/contact';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { SharedSvg } from '@/modules/Shared/SharedSvg';
+import { Popup } from '@/modules/Shared/Popup';
+import { useT } from '@/hooks';
 
 import styles from './ContactForm.module.scss';
-import classNames from 'classnames';
-import { SharedSvg } from '@/modules/Shared/SharedSvg';
-import { useState } from 'react';
-import { Popup } from '@/modules/Shared/Popup';
 
 type FormData = z.infer<typeof contactSchema>;
 
@@ -19,9 +18,13 @@ type PopupType = {
 };
 
 export const ContactForm = () => {
+  const t = useT('contactPage.form');
+  const formElements = useT('contactPage.form.formElements');
+  const formErrors = t.raw<{ [key: string]: string }>('errors');
+
   const [popup, setPopup] = useState<PopupType>({
     message: '',
-    type: 'success',
+    type: 'error',
   });
 
   const handlerPopupOnClose = () => {
@@ -54,12 +57,12 @@ export const ContactForm = () => {
     if (resData.success) {
       reset();
       setPopup({
-        message: 'Thanks! I’ll get back to you shortly.',
+        message: t('successMessage'),
         type: 'success',
       });
     } else {
       setPopup({
-        message: resData.error,
+        message: `${t('errorMessage')} ${resData.error}`,
         type: 'error',
       });
     }
@@ -69,13 +72,11 @@ export const ContactForm = () => {
     <>
       <div className={styles.contact}>
         <h2 className={classNames(styles.contact__title, 'title')}>
-          Get in Touch
+          {t('title')}
         </h2>
 
         <p className={classNames(styles.contact__subtitle, 'subtitle')}>
-          If you have a project idea, a job opportunity, or just want to connect
-          — feel free to drop me a message. I’ll get back to you as soon as
-          possible.
+          {t('subtitle')}
         </p>
 
         <form
@@ -92,7 +93,7 @@ export const ContactForm = () => {
               })}
             >
               <label htmlFor='name' className={styles.contact__label}>
-                Name
+                {formElements('nameInput.label')}
               </label>
 
               <input
@@ -101,11 +102,13 @@ export const ContactForm = () => {
                 name='name'
                 type='text'
                 className={styles.contact__field}
-                placeholder='Your name'
+                placeholder={formElements('nameInput.placeholder')}
                 autoComplete='off'
               />
-              {errors?.name && (
-                <p className={styles.contact__err}>{errors?.name?.message}</p>
+              {errors?.name?.message && (
+                <p className={styles.contact__err}>
+                  {formErrors[errors.name.message]}
+                </p>
               )}
             </div>
 
@@ -116,7 +119,7 @@ export const ContactForm = () => {
               })}
             >
               <label htmlFor='email' className={styles.contact__label}>
-                Email address
+                {formElements('emailInput.label')}
               </label>
 
               <input
@@ -125,11 +128,13 @@ export const ContactForm = () => {
                 name='email'
                 type='text'
                 className={styles.contact__field}
-                placeholder='john@doe.com'
+                placeholder={formElements('emailInput.placeholder')}
                 autoComplete='off'
               />
-              {errors?.email && (
-                <p className={styles.contact__err}>{errors?.email?.message}</p>
+              {errors?.email?.message && (
+                <p className={styles.contact__err}>
+                  {formErrors[errors.email.message]}
+                </p>
               )}
             </div>
           </div>
@@ -141,7 +146,7 @@ export const ContactForm = () => {
             })}
           >
             <label htmlFor='subject' className={styles.contact__label}>
-              Subject
+              {formElements('subjectInput.label')}
             </label>
 
             <input
@@ -150,11 +155,13 @@ export const ContactForm = () => {
               type='text'
               name='subject'
               className={styles.contact__field}
-              placeholder='How can I help you?'
+              placeholder={formElements('subjectInput.placeholder')}
               autoComplete='off'
             />
-            {errors?.subject && (
-              <p className={styles.contact__err}>{errors?.subject?.message}</p>
+            {errors?.subject?.message && (
+              <p className={styles.contact__err}>
+                {formErrors[errors.subject.message]}
+              </p>
             )}
           </div>
 
@@ -165,7 +172,7 @@ export const ContactForm = () => {
             })}
           >
             <label htmlFor='message' className={styles.contact__label}>
-              Message
+              {formElements('messageInput.label')}
             </label>
 
             <textarea
@@ -173,11 +180,13 @@ export const ContactForm = () => {
               id='message'
               name='message'
               className={styles.contact__field}
-              placeholder='Write your message here...'
+              placeholder={formElements('messageInput.placeholder')}
               autoComplete='off'
             />
-            {errors?.message && (
-              <p className={styles.contact__err}>{errors?.message?.message}</p>
+            {errors?.message?.message && (
+              <p className={styles.contact__err}>
+                {formErrors[errors.message.message]}
+              </p>
             )}
           </div>
 
@@ -192,7 +201,7 @@ export const ContactForm = () => {
                 <SharedSvg type='loading' />
               </div>
             ) : (
-              'Send your message'
+              formElements('btn')
             )}
           </button>
         </form>
